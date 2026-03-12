@@ -1,3 +1,4 @@
+/* 这里的字体引入保持不变 */
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -63,9 +64,21 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* =======================================================
+   现代化视觉修改开始
+======================================================== */
+
+body, td, th, tr, p, a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7; /* 增加行高，让文字呼吸感更强 */
+  color: #2b2b2b;   /* 颜色改为深灰，比纯黑更有质感，保护视力 */
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
+  transition: color 0.25s ease-in-out; /* 鼠标放上去有颜色平滑渐变动画 */
 }
 
 a:focus,
@@ -74,44 +87,48 @@ a:hover {
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 17px;
-}
-
-h2 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 26px;
-  margin-bottom: 6px;
-}
-
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
   font-weight: 700;
+  color: #000;      /* 粗体字更黑一点，形成对比 */
 }
 
+/* 顶部最大的名字 */
 .name {
   padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 46px;         /* 从36px放大到46px，更霸气 */
+  font-weight: 700;        /* 字体加粗 */
+  letter-spacing: -0.5px;  /* 字母间距稍微收紧，更显现代感 */
+  color: #111;
 }
 
+/* 版块标题 (Research, Education 等) */
+h2 {
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 30px;         /* 略微调大 */
+  font-weight: 600;        /* 加粗 */
+  color: #111;
+  margin-bottom: 15px;     /* 增加下方留白 */
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eaeaea; /* 神来之笔：加上一条极简的浅色分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 18px;         /* 原版只有可怜的14px，现放大到18px */
+  font-weight: 700;
+  color: #1772d0;          /* 标题默认带主色调 */
+  transition: color 0.2s ease;
+}
+a:hover .papertitle {
+  color: #f09228;          /* 悬停时跟着变色 */
+}
+
+/* 项目配图容器：原样保留 */
 .one {
   width: 160px;
   height: 160px;
@@ -127,6 +144,11 @@ h2 {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+/* 图片微圆角处理，显得现代 */
+img {
+  border-radius: 6px;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -135,6 +157,8 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+  padding: 2px 4px; /* 让高亮背景更有包裹感 */
+  border-radius: 3px;
 }
 
 .colored-box {
