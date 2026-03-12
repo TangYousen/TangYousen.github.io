@@ -130,8 +130,8 @@ a:hover .papertitle {
 
 /* 项目配图容器：原样保留 */
 .one {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   position: relative;
 }
 
@@ -146,7 +146,7 @@ a:hover .papertitle {
 
 /* 图片微圆角处理，显得现代 */
 img {
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 .fade {
