@@ -71,7 +71,7 @@
 body, td, th, tr, p, a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.7; /* 增加行高，让文字呼吸感更强 */
+  line-height: 1.55; /* 增加行高，让文字呼吸感更强 */
   color: #2b2b2b;   /* 颜色改为深灰，比纯黑更有质感，保护视力 */
 }
 
@@ -98,7 +98,7 @@ strong {
   padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 46px;         /* 从36px放大到46px，更霸气 */
+  font-size: 38px;         /* 从36px放大到46px，更霸气 */
   font-weight: 700;        /* 字体加粗 */
   letter-spacing: -0.5px;  /* 字母间距稍微收紧，更显现代感 */
   color: #111;
@@ -170,4 +170,11 @@ span.highlight {
 
 p {
   margin-bottom: 12px;
+}
+
+/* 页面整体宽度控制 */
+table {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
