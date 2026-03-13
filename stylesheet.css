@@ -109,35 +109,36 @@ tr:has(.one):hover {
 }
 
 /* =======================================================
-   === 修复图片容器与交互 (完美适配长方形论文配图) ===
+   === 修复图片容器与交互 (长方形适配加强版) ===
 ======================================================== */
 
-/* 让容器宽度充满左侧20%的表格列，高度自动按比例缩放 */
 .one {
   width: 100%;
-  max-width: 220px; /* 限制最大宽度，防止图显得过于巨大 */
-  height: auto;     /* 关键：高度自动适应长方形！ */
+  max-width: 260px; /* 调大宽度上限，让长方形架构图显得更清晰、更大 */
+  height: auto;
   position: relative;
-  display: flex;
-  align-items: center; /* 如果有多张比例不同的图，确保它们在左侧垂直居中 */
+  margin: 0 auto;
 }
 
-.two {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity .3s ease-in-out;
+.one img {
+  width: 100% !important;
+  height: auto !important; /* 强制自适应高度，绝不裁剪 */
+  display: block;
+  border-radius: 0px !important;
+  /* 加一个极其细微的边框，能让白底的架构图在浅色背景上更有层次感 */
+  border: 1px solid #f0f0f0; 
 }
 
-/* 取消强制的正方形裁切，改用自适应高度 */
-.one img, .two img, .two video {
-  width: 100%;
-  height: auto; /* 关键：高度自动，彻底解决长方形被裁成正方形的问题 */
-  display: block; /* 消除图片底部默认的几像素空白缝隙 */
-  border-radius: 0px !important; /* 维持纯正方形/直角边缘 */
-  border: 1px solid #e5e7eb; /* 给架构图加一圈极淡的边框，防止白色背景的图和网页融为一体 */
+/* 保持你要求的局部悬停阴影交互 */
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  /* 只在周边加淡淡的阴影，不填充颜色 */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
 }
 
 /* 高亮背景 - 更有包裹感 */
