@@ -109,28 +109,35 @@ tr:has(.one):hover {
 }
 
 /* =======================================================
-   === 修复图片容器与交互 ===
+   === 修复图片容器与交互 (完美适配长方形论文配图) ===
 ======================================================== */
 
-/* 统一 .one 和 .two 的大小，防止动图悬停错位 */
-.one, .two {
-  width: 180px;
-  height: 180px;
+/* 让容器宽度充满左侧20%的表格列，高度自动按比例缩放 */
+.one {
+  width: 100%;
+  max-width: 220px; /* 限制最大宽度，防止图显得过于巨大 */
+  height: auto;     /* 关键：高度自动适应长方形！ */
   position: relative;
+  display: flex;
+  align-items: center; /* 如果有多张比例不同的图，确保它们在左侧垂直居中 */
 }
 
 .two {
+  width: 100%;
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   transition: opacity .3s ease-in-out;
 }
 
-/* 彻底清空图片和视频的圆角，变回直角正方形 */
+/* 取消强制的正方形裁切，改用自适应高度 */
 .one img, .two img, .two video {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* 强制图片填满容器并裁切，保证不论传什么比例的图都是整齐的方块 */
-  border-radius: 0px !important; /* 强制变回直角 */
-  border: 1px solid #f3f4f6; /* 给图片本身加一圈极淡的边框，更显精致 */
+  height: auto; /* 关键：高度自动，彻底解决长方形被裁成正方形的问题 */
+  display: block; /* 消除图片底部默认的几像素空白缝隙 */
+  border-radius: 0px !important; /* 维持纯正方形/直角边缘 */
+  border: 1px solid #e5e7eb; /* 给架构图加一圈极淡的边框，防止白色背景的图和网页融为一体 */
 }
 
 /* 高亮背景 - 更有包裹感 */
