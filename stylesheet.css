@@ -1,22 +1,15 @@
-/* =======================================================
-   彻底重写的 stylesheet.css (微整形高级版)
-   - 保持原有表格布局 (左图右文)
-   - 替换高级 Inter 字体
-   - 优化间距、颜色、行高
-   - 照片变回直角正方形
-   - 仅 Research 项目行添加平滑悬停阴影
-======================================================== */
 
-/* 引入硅谷最爱用的 Inter 字体 */
+
+/* Inter 字体 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* 全局样式 - 提升呼吸感 */
+/* 全局样式*/
 body, td, th, tr, p, a {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 15.5px; /* 略微缩小，更显精致 */
-  line-height: 1.65; /* 黄金阅读行高 */
-  color: #374151;   /* 极具质感的深灰色，代替刺眼纯黑 */
-  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色，保护视力 */
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
 }
 
 /* 优化最外层表格的内边距 */
@@ -37,7 +30,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* 加粗文字 - 更深的纯黑 */
+/* 加粗文字 */
 strong {
   font-weight: 600;
   color: #111827; 
@@ -87,34 +80,28 @@ p {
   margin-bottom: 12px;
 }
 
-/* =======================================================
-   === 核心：高级悬停卡片阴影效果 (仅对 Research 等项目行) ===
-======================================================== */
 
-/* 1. 找到所有包含图片容器 .one 的表格行 <tr> */
-/* 我们需要给这个 <tr> 添加动画过渡效果，并设置透明边框 */
+/* 找到所有包含图片容器 .one 的表格行 <tr> */
+/* 需要给这个 <tr> 添加动画过渡效果，并设置透明边框 */
 tr:has(.one) {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 极为丝滑的动画曲线 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
     border: 1px solid transparent; /* 默认透明边框，防止抖动 */
     background-color: transparent; /* 默认无背景 */
-    border-radius: 12px; /* 给整个行加上微小圆角，让阴影更高级 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
 }
 
-/* 2. 鼠标放上去时的魔法效果！整个项目卡片优雅上浮并带上细腻阴影 */
+/* 2. 鼠标放上去的效果 */
 tr:has(.one):hover {
     background-color: #ffffff; /* 浮现出纯白背景 */
     border: 1px solid #f3f4f6; /* 淡淡的边框 */
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 细腻、高级的卡片阴影 */
-    transform: translateY(-3px); /* 整个行优雅上浮 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
 }
 
-/* =======================================================
-   === 修复图片容器与交互 (长方形适配加强版) ===
-======================================================== */
 
 .one {
   width: 100%;
-  max-width: 260px; /* 调大宽度上限，让长方形架构图显得更清晰、更大 */
+  max-width: 260px; /* 调大宽度上限 */
   height: auto;
   position: relative;
   margin: 0 auto;
@@ -122,26 +109,22 @@ tr:has(.one):hover {
 
 .one img {
   width: 100% !important;
-  height: auto !important; /* 强制自适应高度，绝不裁剪 */
+  height: auto !important; /* 强制自适应高度 */
   display: block;
   border-radius: 0px !important;
-  /* 加一个极其细微的边框，能让白底的架构图在浅色背景上更有层次感 */
   border: 1px solid #f0f0f0; 
 }
 
-/* 保持你要求的局部悬停阴影交互 */
 .project-row {
   transition: all 0.3s ease;
   border-radius: 8px;
 }
 
 .project-row:hover {
-  /* 只在周边加淡淡的阴影，不填充颜色 */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   transform: translateY(-2px);
 }
 
-/* 高亮背景 - 更有包裹感 */
 span.highlight {
   background-color: #ffffd0;
   padding: 2px 4px; 
@@ -158,20 +141,14 @@ span.highlight {
     }
 }
 
-/* =======================================================
-   高级感：局部悬停微阴影交互 (仅外围淡淡阴影，无色块填充)
-======================================================== */
 
 .project-row {
-  /* 极其丝滑的动画过渡时间 */
   transition: box-shadow 0.3s ease, transform 0.3s ease; 
-  /* 必须加上微小的圆角，阴影才不会显得死板刺锐 */
+  
   border-radius: 8px; 
 }
 
 .project-row:hover {
-  /* 这是精髓：透明度仅为 0.06 的纯黑外围阴影，绝不改变内部背景颜色 */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
-  /* 鼠标放上时，这一整行会轻轻向上浮起 2 像素 */
   transform: translateY(-2px); 
 }
