@@ -10,6 +10,7 @@ body, td, th, tr, p, a {
   line-height: 1.65; /*行高 */
   color: #374151;   /* 深灰色 */
   background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
 }
 
 /* 优化最外层表格的内边距 */
