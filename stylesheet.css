@@ -167,12 +167,12 @@ span.highlight {
   z-index: -1;
   pointer-events: none;
 }
-/* 打字光标效果 */
 #typed-name {
   display: inline-block;
   white-space: pre; /* 保留空格 */
 }
 
+/* 光标 */
 #typed-name::after {
   content: '|';
   display: inline-block;
@@ -184,4 +184,10 @@ span.highlight {
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
+}
+
+/* 打完字后光标消失 */
+#typed-name.finished::after {
+  content: '';
+  animation: none;
 }
