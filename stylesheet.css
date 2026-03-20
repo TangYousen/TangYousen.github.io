@@ -152,3 +152,17 @@ span.highlight {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
   transform: translateY(-2px); 
 }
+
+/* ===============================
+   粒子背景层
+=============================== */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
