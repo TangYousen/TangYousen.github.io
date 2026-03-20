@@ -167,27 +167,17 @@ span.highlight {
   z-index: -1;
   pointer-events: none;
 }
-#typed-name {
-  display: inline-block;
-  white-space: pre; /* 保留空格 */
-}
-
 #typed-name::after {
   content: '';
   display: inline-block;
-  width: 1px;              /* 光标宽度，1px 非常细 */
-  height: 1em;             /* 高度和文字一样 */
+  width: 1px;               /* 光标宽度很细 */
+  height: 1em;              /* 高度和文字一样 */
   background-color: #2563eb; /* 光标颜色 */
-  vertical-align: bottom;   /* 对齐文字底部 */
-  margin-left: 0px;         /* 紧贴文字 */
-  animation: blink 1s step-start infinite; /* 闪烁 */
+  vertical-align: bottom;    /* 对齐文字底部 */
+  margin-left: 0px;          /* 紧贴文字 */
+  /* 不再使用动画，所以光标恒定显示 */
 }
 
 #typed-name.finished::after {
-  display: none;            /* 打完字后光标消失 */
-}
-
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  display: none;             /* 打完字后光标消失 */
 }
