@@ -168,11 +168,18 @@ span.highlight {
   pointer-events: none;
 }
 /* 打字光标效果 */
+#typed-name {
+  display: inline-block;
+  transform-origin: left center;
+}
+
+/* 光标 */
 #typed-name::after {
-  content: '|';           /* 光标字符 */
-  animation: blink 0.7s infinite;
+  content: '|';
+  display: inline-block;
   margin-left: 2px;
-  color: #2563eb;         /* 光标颜色，可调 */
+  color: #2563eb;
+  animation: blink 0.6s infinite;
 }
 
 @keyframes blink {
