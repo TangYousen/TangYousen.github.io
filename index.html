@@ -200,12 +200,12 @@
       </tr>
     </tbody></table>
     <script>
-    const nameText = "Yousen Tang";  // 注意空格会保留
+    const nameText = "Yousen Tang";  // 注意空格
     const typedName = document.getElementById("typed-name");
     const typingSpeed = 150; // 每个字固定间隔 ms
-    
+  
     let i = 0;
-    
+  
     function typeWriter() {
       if (i < nameText.length) {
         typedName.textContent += nameText.charAt(i);
@@ -215,10 +215,11 @@
         typedName.classList.add('finished'); // 打完字后移除光标
       }
     }
-    
+  
     window.addEventListener('DOMContentLoaded', () => {
       typeWriter();
     });
+    </script>
     <script>
     tsParticles.load("tsparticles", {
       fullScreen: {
