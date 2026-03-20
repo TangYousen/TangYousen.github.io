@@ -168,23 +168,20 @@ span.highlight {
   pointer-events: none;
 }
 #typed-name {
-  display: inline-block;
-  white-space: pre; /* 保留空格 */
-  position: relative; /* 光标定位基于文字 */
-  font-size: 42px;   /* 和文字一样大 */
-  line-height: 1;    /* 避免光标偏移 */
+  display: inline-flex;
+  align-items: center;   /* 垂直居中 */
+  white-space: pre;      /* 保留空格 */
 }
 
 #typed-name::after {
-  content: '';
-  position: absolute;
-  top: 0;                  /* 顶部对齐文字 */
-  left: 100%;              /* 紧贴文字末尾 */
-  width: 2px;              /* 光标宽一点，能看见 */
-  height: 1em;             /* 高度与文字一致 */
-  background-color: #2563eb;
+  content: "";
+  display: inline-block;
+  width: 3px;            /* 比之前粗一点 */
+  height: 0.9em;         /* 和文字高度匹配 */
+  background: #2563eb;
+  margin-left: 2px;      /* 离字很近 */
 }
 
 #typed-name.finished::after {
-  display: none;           /* 打完字后消失 */
+  display: none;         /* 打完字消失 */
 }
