@@ -176,7 +176,7 @@ span.highlight {
 #typed-name::after {
   content: "";
   display: inline-block;
-  width: 3px;            /* 比之前粗一点 */
+  width: 5px;            /* 比之前粗一点 */
   height: 0.9em;         /* 和文字高度匹配 */
   background: #2563eb;
   margin-left: 2px;      /* 离字很近 */
