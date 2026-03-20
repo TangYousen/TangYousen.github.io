@@ -167,3 +167,15 @@ span.highlight {
   z-index: -1;
   pointer-events: none;
 }
+/* 打字光标效果 */
+#typed-name::after {
+  content: '|';           /* 光标字符 */
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+  color: #2563eb;         /* 光标颜色，可调 */
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
