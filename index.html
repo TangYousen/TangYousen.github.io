@@ -200,40 +200,29 @@
       </tr>
     </tbody></table>
     <script>
-    const nameText = "Yousen Tang";
+    const nameText = "Yousen Tang";  // 注意空格会被保留
     const typedName = document.getElementById("typed-name");
+    const typingSpeed = 150; // 每个字母固定间隔 ms
     
     let i = 0;
     
-    // 随机速度变化，带加速度和弹性
-    function typeWriterAdvanced() {
+    function typeWriter() {
       if (i < nameText.length) {
-        const char = document.createElement('span');
-        char.textContent = nameText[i];
-    
-        // 初始弹性缩放
-        char.style.display = 'inline-block';
-        char.style.transform = 'scale(0.3) translateY(-10px)';
-        char.style.opacity = 0;
-        char.style.transition = 'transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.35s ease';
-    
-        typedName.appendChild(char);
-    
-        // 延迟触发弹性动画
-        requestAnimationFrame(() => {
-          char.style.transform = 'scale(1) translateY(0px)';
-          char.style.opacity = 1;
-        });
-    
+        typedName.textContent += nameText.charAt(i);
         i++;
-        // 随机间隔，0.05 ~ 0.15秒，更自然有力
-        setTimeout(typeWriterAdvanced, 50 + Math.random() * 100);
+        setTimeout(typeWriter, typingSpeed);
+      } else {
+        // 打完后移除光标
+        typedName.classList.add('finished');
+        typedName.style.setProperty('--cursor-display', 'none');
+        typedName.style.setProperty('content', ''); 
+        typedName.style.setProperty('animation', 'none');
+        typedName.style.setProperty('opacity', '1');
       }
     }
     
-    // 页面加载启动
     window.addEventListener('DOMContentLoaded', () => {
-      typeWriterAdvanced();
+      typeWriter();
     });
     </script>
     <script>
