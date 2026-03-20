@@ -172,24 +172,21 @@ span.highlight {
   white-space: pre; /* 保留空格 */
 }
 
-/* 光标样式 */
 #typed-name::after {
-  content: '|';
-  display: inline-block;
-  color: #2563eb;          /* 光标颜色 */
-  font-weight: normal;      /* 光标细一点 */
-  margin-left: 1px;         /* 距离文字更近 */
-  vertical-align: bottom;   /* 和文字底部对齐 */
-  animation: blink 1s step-start infinite;  /* 闪烁，慢一点 */
-}
-
-/* 打完字后隐藏光标 */
-#typed-name.finished::after {
   content: '';
-  animation: none;
+  display: inline-block;
+  width: 1px;              /* 光标宽度，1px 非常细 */
+  height: 1em;             /* 高度和文字一样 */
+  background-color: #2563eb; /* 光标颜色 */
+  vertical-align: bottom;   /* 对齐文字底部 */
+  margin-left: 0px;         /* 紧贴文字 */
+  animation: blink 1s step-start infinite; /* 闪烁 */
 }
 
-/* 闪烁动画 */
+#typed-name.finished::after {
+  display: none;            /* 打完字后光标消失 */
+}
+
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
