@@ -186,27 +186,19 @@ span.highlight {
   display: none;         /* 打完字消失 */
 }
 
-/* Visitors map card */
-.visitor-card {
+/* Visitors map - subtle footer style */
+.visitor-map {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin: 20px auto 30px auto;
-  padding: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 
-  background: #ffffff;
-  border-radius: 12px;
-
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-  max-width: 460px;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
 }
 
-/* hover 微动效 */
-.visitor-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+.visitor-map:hover {
+  opacity: 1;
 }
