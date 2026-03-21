@@ -203,7 +203,7 @@
       </tr>
     </tbody></table>
     <script>
-    const nameText = "Yousen Tang";  // 注意空格
+    const nameText = "Yousen Tang";  
     const typedName = document.getElementById("typed-name");
     const typingSpeed = 190; // 每个字固定间隔 ms
   
@@ -213,7 +213,7 @@
       if (i < nameText.length) {
         typedName.textContent += nameText.charAt(i);
         i++;
-        setTimeout(typeWriter, typingSpeed); // 固定间隔
+        setTimeout(typeWriter, typingSpeed); 
       } else {
         typedName.classList.add('finished'); // 打完字后移除光标
       }
