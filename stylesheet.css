@@ -27,7 +27,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #dc2626; /* 悬停变成明亮的红色 */
+  color: #dc2626; 
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ strong {
   color: #111827; 
 }
 
-/* 顶部最大的名字 - 超粗体、收紧字母间距 */
+/* 顶部的名字  */
 .name {
   padding-top: 20px;
   margin: 0;
@@ -48,7 +48,7 @@ strong {
   color: #111827;
 }
 
-/* 版块标题 (Research, Education 等) - 干净的分割线 */
+/* 版块标题 */
 h2 {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -59,10 +59,10 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;     
   padding-bottom: 8px;
-  border-bottom: 2px solid #e5e7eb; /* 干净的浅灰分割线，极其提升排版清晰度 */
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
 }
 
-/* 论文/项目标题 - 默认加粗、深蓝、收紧间距 */
+/* 论文/项目标题 */
 .papertitle {
   font-family: 'Inter', sans-serif;
   font-size: 17px;         
@@ -82,8 +82,6 @@ p {
 }
 
 
-/* 找到所有包含图片容器 .one 的表格行 <tr> */
-/* 需要给这个 <tr> 添加动画过渡效果，并设置透明边框 */
 tr:has(.one) {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
     border: 1px solid transparent; /* 默认透明边框，防止抖动 */
@@ -102,7 +100,7 @@ tr:has(.one):hover {
 
 .one {
   width: 100%;
-  max-width: 260px; /* 调大宽度上限 */
+  max-width: 260px; 
   height: auto;
   position: relative;
   margin: 0 auto;
@@ -110,7 +108,7 @@ tr:has(.one):hover {
 
 .one img {
   width: 100% !important;
-  height: auto !important; /* 强制自适应高度 */
+  height: auto !important; 
   display: block;
   border-radius: 0px !important;
   border: 1px solid #f0f0f0; 
@@ -132,9 +130,7 @@ span.highlight {
   border-radius: 3px;
 }
 
-/* =======================================================
-   适配移动端
-======================================================== */
+/*适配移动端*/
 @media (max-width: 768px) {
     .one, .two {
         width: 100px;
@@ -154,9 +150,7 @@ span.highlight {
   transform: translateY(-2px); 
 }
 
-/* ===============================
-   粒子背景层
-=============================== */
+/* 粒子背景层 */
 
 #tsparticles {
   position: fixed;
@@ -169,24 +163,24 @@ span.highlight {
 }
 #typed-name {
   display: inline-flex;
-  align-items: center;   /* 垂直居中 */
-  white-space: pre;      /* 保留空格 */
+  align-items: center;   
+  white-space: pre;    
 }
 
 #typed-name::after {
   content: "";
   display: inline-block;
-  width: 5px;            /* 比之前粗一点 */
-  height: 0.9em;         /* 和文字高度匹配 */
+  width: 5px;           
+  height: 0.9em;        
   background: #2563eb;
-  margin-left: 2px;      /* 离字很近 */
+  margin-left: 2px;     
 }
 
 #typed-name.finished::after {
-  display: none;         /* 打完字消失 */
+  display: none;         
 }
 
-/* Visitors map - subtle footer style */
+/* 访客地图*/
 .visitor-map {
   display: flex;
   justify-content: center;
