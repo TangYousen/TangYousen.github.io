@@ -158,7 +158,7 @@ span.highlight {
   align-items: center;   
   white-space: pre;    
 }
-
+/*这个是姓名打字渐出的特效
 #typed-name::after {
   content: "";
   display: inline-block;
@@ -171,7 +171,7 @@ span.highlight {
 #typed-name.finished::after {
   display: none;         
 }
-
+*/
 /* 访客地图*/
 .visitor-map {
   display: flex;
