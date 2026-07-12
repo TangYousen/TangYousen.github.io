@@ -491,22 +491,22 @@ span.highlight {
   }
 
   .publications-table .project-row > td {
-    padding-top: 42px !important;
-    padding-bottom: 42px !important;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
     vertical-align: middle !important;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.58) !important;
   }
 
   .publications-table .project-row > td:first-child {
-    width: 42% !important;
+    width: 45% !important;
     padding-left: 24px !important;
     padding-right: 20px !important;
     border-radius: 15px 0 0 15px;
   }
 
   .publications-table .project-row > td:nth-child(2) {
-    width: 58% !important;
+    width: 55% !important;
     padding-left: 18px !important;
     padding-right: 34px !important;
     border-radius: 0 15px 15px 0;
