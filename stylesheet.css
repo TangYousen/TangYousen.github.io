@@ -382,12 +382,48 @@ span.highlight {
   }
 
 
-  .project-row img[style*="max-width: 120px"] {
+  .misc-table,
+  .misc-table > tbody {
     display: block;
-    width: 120px !important;
-    max-width: 42vw !important;
-    height: auto !important;
-    margin: 0 auto 12px;
+    width: 100%;
+  }
+  
+  .misc-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+  }
+  
+  .misc-row > td {
+    display: block;
+    width: 100% !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  .misc-image-cell {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  .misc-image {
+    display: block;
+    width: 170px;
+    max-width: 54vw;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .misc-text-cell,
+  .misc-text-cell strong {
+    background: transparent !important;
   }
 
   .visitor-map {
@@ -411,75 +447,121 @@ span.highlight {
 /*电脑端宽版布局*/
 @media (min-width: 769px) {
 
-  /* 整个网站主体拉宽 */
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
+    font-size: 16.5px;
+    line-height: 1.68;
+  }
+
   body > table {
     width: calc(100% - 48px) !important;
     max-width: 1280px !important;
-    padding: 24px 20px !important;
+    padding: 26px 22px !important;
     box-sizing: border-box;
   }
 
-  /* 项目之间增加纵向空间 */
+  .name {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  .papertitle {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
   .publications-table {
+    width: 100% !important;
+    table-layout: fixed;
+    border-collapse: separate !important;
     border-spacing: 0 22px !important;
   }
 
-  /* 每条项目做得更高、更舒展 */
+  .publications-table .project-row {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
   .publications-table .project-row > td {
     padding-top: 30px !important;
     padding-bottom: 30px !important;
     vertical-align: middle !important;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.58) !important;
   }
 
-  /* 图片列：约占 40% */
   .publications-table .project-row > td:first-child {
-    width: 40% !important;
+    width: 38% !important;
     padding-left: 24px !important;
-    padding-right: 24px !important;
+    padding-right: 20px !important;
+    border-radius: 15px 0 0 15px;
   }
 
-  /* 文字列：约占 60% */
   .publications-table .project-row > td:nth-child(2) {
-    width: 60% !important;
-    padding-left: 10px !important;
-    padding-right: 30px !important;
+    width: 62% !important;
+    padding-left: 18px !important;
+    padding-right: 34px !important;
+    border-radius: 0 15px 15px 0;
   }
 
-  /* 图片展示区域 */
   .publications-table .one {
-    width: 100%;
-    max-width: none;
-    min-height: 220px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0;
     margin: 0 auto;
   }
 
-  /* 保持图片原始比例，不裁剪、不拉伸 */
   .publications-table .one img {
     display: block;
-
-    width: auto !important;
-    height: auto !important;
-
+    width: 100% !important;
     max-width: 100% !important;
-    max-height: 235px;
-
+    height: auto !important;
+    max-height: none;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
     object-fit: contain;
-
+    background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 8px !important;
-
+    border-radius: 9px !important;
     box-shadow:
-      0 2px 6px rgba(15, 23, 42, 0.05),
-      0 10px 24px rgba(15, 23, 42, 0.04);
+      0 3px 8px rgba(15, 23, 42, 0.05),
+      0 12px 28px rgba(15, 23, 42, 0.055);
   }
 
-  /* 卡片内部背景透明，避免全局 td 背景盖住效果 */
-  .publications-table .project-row > td,
+  .publications-table .compact-row > td {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .publications-table .one img.compact-figure {
+    width: 215px !important;
+    max-width: 68% !important;
+    padding: 0;
+  }
+
+  .publications-table .square-row > td {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .publications-table .one img.mapf-figure {
+    width: 300px !important;
+    max-width: 78% !important;
+    padding: 0;
+  }
+
   .publications-table .project-row p,
   .publications-table .project-row a,
   .publications-table .project-row span,
@@ -488,15 +570,80 @@ span.highlight {
     background: transparent !important;
   }
 
-  /* 每条项目的轻微卡片质感 */
-  .publications-table .project-row {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 14px;
+  .publications-table .project-row > td:nth-child(2) p {
+    margin-top: 22px;
+    margin-bottom: 0;
   }
 
   .publications-table .project-row:hover {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
     transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  }
+
+  .publications-table .project-row:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .misc-table {
+    width: 100%;
+    table-layout: fixed;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0 18px;
+    margin: 0 auto;
+  }
+
+  .misc-row {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .misc-row > td {
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.58) !important;
+  }
+
+  .misc-image-cell {
+    width: 28%;
+    padding: 30px 20px 30px 26px;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .misc-text-cell {
+    width: 72%;
+    padding: 30px 38px 30px 18px;
+    font-size: 16.5px;
+    line-height: 1.68;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .misc-image {
+    display: block;
+    width: 210px;
+    max-width: 82%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+    box-shadow:
+      0 3px 8px rgba(15, 23, 42, 0.05),
+      0 12px 28px rgba(15, 23, 42, 0.055);
+  }
+
+  .misc-text-cell,
+  .misc-text-cell strong {
+    background: transparent !important;
+  }
+
+  .misc-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  }
+
+  .misc-row:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
   }
 }
