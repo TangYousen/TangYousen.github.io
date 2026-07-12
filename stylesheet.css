@@ -273,14 +273,25 @@ span.highlight {
     padding-bottom: 6px;
     font-size: 22px;
     line-height: 1.3;
+    background: transparent !important;
   }
 
   td[style*="padding:16px"][style*="width:100%"] {
     padding: 10px 4px !important;
+    background: transparent !important;
   }
-
+  
   table[style*="padding:16px"] {
-    padding: 4px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] > tbody > tr > td {
+    width: 100% !important;
+    padding: 10px 4px !important;
+    background: transparent !important;
   }
 
   .project-row {
@@ -298,17 +309,15 @@ span.highlight {
     transform: none !important;
   }
 
-  .project-row,
   .project-row > td,
   .project-row > td p,
   .project-row > td a,
   .project-row > td span,
   .project-row > td strong,
   .project-row > td em,
-  tr:has(.one),
   tr:has(.one) > td {
-    background-color: transparent;
-    background: transparent;
+    background-color: transparent !important;
+    background: transparent !important;
   }
 
   .project-row > td {
