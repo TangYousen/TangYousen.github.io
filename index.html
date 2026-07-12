@@ -1,3 +1,4561 @@
+
+
+今天 13:12
+
+粘贴的文本 (1)(12).txt
+文档
+
+
+/* Inter 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 全局样式*/
+body, td, th, tr, p, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
+}
+
+/* 优化最外层表格的内边距 */
+body > table {
+    padding: 20px 10px;
+}
+
+/* 链接样式 - 高级深蓝 */
+a {
+  color: #2563eb; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #dc2626; 
+  text-decoration: none;
+}
+
+/* 加粗文字 */
+strong {
+  font-weight: 600;
+  color: #111827; 
+}
+
+/* 顶部的名字  */
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;         
+  font-weight: 800;        
+  letter-spacing: -0.03em;  
+  color: #111827;
+}
+
+/* 版块标题 */
+h2 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;         
+  font-weight: 700;        
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 20px;     
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;         
+  font-weight: 700;
+  color: #2563eb;          
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+a:hover .papertitle {
+  color: #dc2626;          
+}
+
+/* 段落间距 */
+p {
+  margin-bottom: 12px;
+}
+
+
+tr:has(.one) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
+    border: 1px solid transparent; /* 默认透明边框，防止抖动 */
+    background-color: transparent; /* 默认无背景 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
+}
+
+/* 2. 鼠标放上去的效果 */
+tr:has(.one):hover {
+    background-color: #ffffff; /* 浮现出纯白背景 */
+    border: 1px solid #f3f4f6; /* 淡淡的边框 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
+}
+
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px; 
+  border-radius: 3px;
+}
+
+/*适配移动端*/
+@media (max-width: 768px) {
+    .one, .two {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.project-row {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+  border-radius: 8px; 
+}
+
+.project-row:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+  transform: translateY(-2px); 
+}
+
+/* 粒子背景层 */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+
+/* 访客地图*/
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.visitor-map:hover {
+  opacity: 1;
+}
+
+你看看这是我的个人网站，你看看这个适配到手机端好吗，是不是没有很好适配我看手机端格式你i看看咋适配
+
+
+粘贴的文本 (1)(13).txt
+文档
+
+
+/* Inter 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 全局样式*/
+body, td, th, tr, p, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
+}
+
+/* 优化最外层表格的内边距 */
+body > table {
+    padding: 20px 10px;
+}
+
+/* 链接样式 - 高级深蓝 */
+a {
+  color: #2563eb; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #dc2626; 
+  text-decoration: none;
+}
+
+/* 加粗文字 */
+strong {
+  font-weight: 600;
+  color: #111827; 
+}
+
+/* 顶部的名字  */
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;         
+  font-weight: 800;        
+  letter-spacing: -0.03em;  
+  color: #111827;
+}
+
+/* 版块标题 */
+h2 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;         
+  font-weight: 700;        
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 20px;     
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;         
+  font-weight: 700;
+  color: #2563eb;          
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+a:hover .papertitle {
+  color: #dc2626;          
+}
+
+/* 段落间距 */
+p {
+  margin-bottom: 12px;
+}
+
+
+tr:has(.one) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
+    border: 1px solid transparent; /* 默认透明边框，防止抖动 */
+    background-color: transparent; /* 默认无背景 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
+}
+
+/* 2. 鼠标放上去的效果 */
+tr:has(.one):hover {
+    background-color: #ffffff; /* 浮现出纯白背景 */
+    border: 1px solid #f3f4f6; /* 淡淡的边框 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
+}
+
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px; 
+  border-radius: 3px;
+}
+
+
+.project-row {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+  border-radius: 8px; 
+}
+
+.project-row:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+  transform: translateY(-2px); 
+}
+
+/* 粒子背景层 */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+
+/* 访客地图*/
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.visitor-map:hover {
+  opacity: 1;
+}
+
+/*适配手机端*/
+@media (max-width: 768px) {
+
+  body > table {
+    width: 100% !important;
+    padding: 0 14px !important;
+  }
+
+  table {
+    max-width: 100% !important;
+  }
+
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px !important;
+  }
+
+  /* 头像区域 */
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td:last-child {
+    text-align: center;
+    padding-top: 22px !important;
+    padding-bottom: 4px !important;
+  }
+
+  /* 头像大小 */
+  img.hoverZoomLink {
+    width: 165px !important;
+    max-width: 55vw !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 姓名 */
+  .name {
+    padding-top: 8px;
+    font-size: 34px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  #typed-name {
+    justify-content: center;
+  }
+
+  /* Email / Github / Scholar 居中 */
+  .name ~ p:last-child {
+    text-align: center;
+  }
+
+
+  h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+
+  .project-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+    transform: none !important;
+  }
+
+  .project-row > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .project-row > td:first-child {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* 项目图片 */
+  .one {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .one img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 230px;
+    object-fit: contain;
+    border-radius: 6px !important;
+  }
+
+  /* 项目标题 */
+  .papertitle {
+    font-size: 16.5px;
+    line-height: 1.4;
+  }
+
+  .project-row:hover,
+  tr:has(.one):hover {
+    transform: none !important;
+  }
+
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+
+  .project-row img[style*="max-width: 120px"] {
+    width: 120px !important;
+    max-width: 45vw !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto 12px;
+  }
+
+
+  .visitor-map {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 22px;
+  }
+
+  .visitor-map iframe,
+  .visitor-map img,
+  .visitor-map canvas {
+    max-width: 100% !important;
+  }
+
+  /* 手机端粒子稍微淡一点 */
+  #tsparticles {
+    opacity: 0.55;
+  }
+}
+
+现在呢你看看咋样
+
+今天 15:12
+
+粘贴的文本 (1)(14).txt
+文档
+你自己看看到底要删什么怎么改啊我想注释不想删，这个光标还挺好看的
+
+
+粘贴的文本 (1)(15).txt
+文档
+这里还怎么改
+
+/* Inter 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 全局样式*/
+body, td, th, tr, p, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
+}
+
+/* 优化最外层表格的内边距 */
+body > table {
+    padding: 20px 10px;
+}
+
+/* 链接样式 - 高级深蓝 */
+a {
+  color: #2563eb; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #dc2626; 
+  text-decoration: none;
+}
+
+/* 加粗文字 */
+strong {
+  font-weight: 600;
+  color: #111827; 
+}
+
+/* 顶部的名字  */
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;         
+  font-weight: 800;        
+  letter-spacing: -0.03em;  
+  color: #111827;
+}
+
+/* 版块标题 */
+h2 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;         
+  font-weight: 700;        
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 20px;     
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;         
+  font-weight: 700;
+  color: #2563eb;          
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+a:hover .papertitle {
+  color: #dc2626;          
+}
+
+/* 段落间距 */
+p {
+  margin-bottom: 12px;
+}
+
+
+tr:has(.one) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
+    border: 1px solid transparent; /* 默认透明边框，防止抖动 */
+    background-color: transparent; /* 默认无背景 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
+}
+
+/* 2. 鼠标放上去的效果 */
+tr:has(.one):hover {
+    background-color: #ffffff; /* 浮现出纯白背景 */
+    border: 1px solid #f3f4f6; /* 淡淡的边框 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
+}
+
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px; 
+  border-radius: 3px;
+}
+
+
+.project-row {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+  border-radius: 8px; 
+}
+
+.project-row:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+  transform: translateY(-2px); 
+}
+
+/* 粒子背景层 */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+/*这个是姓名打字渐出的特效
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+*/
+/* 访客地图*/
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.visitor-map:hover {
+  opacity: 1;
+}
+
+/*适配手机端*/
+@media (max-width: 768px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body > table {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+  }
+
+  table {
+    max-width: 100% !important;
+  }
+
+  /* ========================================
+     顶部个人信息
+     ======================================== */
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px !important;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  /* 头像区域 */
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td:last-child {
+    padding-top: 22px !important;
+    padding-bottom: 4px !important;
+    text-align: center;
+  }
+
+  /* 头像 */
+  img.hoverZoomLink {
+    display: block;
+    width: 165px !important;
+    max-width: 52vw !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  /* 姓名 */
+  .name {
+    padding-top: 8px;
+    margin-bottom: 10px;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  #typed-name {
+    justify-content: center;
+  }
+
+  /* Email / Github / Scholar */
+  .name ~ p:last-child {
+    text-align: center;
+  }
+
+
+  h2 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    font-size: 22px;
+    line-height: 1.3;
+    background: transparent !important;
+  }
+
+  td[style*="padding:16px"][style*="width:100%"] {
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] > tbody > tr > td {
+    width: 100% !important;
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+
+  .project-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+
+    transform: none !important;
+  }
+
+  .project-row > td,
+  .project-row > td p,
+  .project-row > td a,
+  .project-row > td span,
+  .project-row > td strong,
+  .project-row > td em,
+  tr:has(.one) > td {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  .project-row > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .project-row > td:first-child {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .one {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .one img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 220px;
+    margin: 0 auto;
+
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px !important;
+  }
+
+  .papertitle {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 16.5px;
+    line-height: 1.4;
+  }
+
+  .project-row:hover,
+  tr:has(.one):hover {
+    transform: none !important;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+  }
+
+
+  ul {
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  td[style*="padding:16px"][style*="vertical-align:middle"] {
+    box-sizing: border-box;
+  }
+
+
+  .project-row img[style*="max-width: 120px"] {
+    display: block;
+    width: 120px !important;
+    max-width: 42vw !important;
+    height: auto !important;
+    margin: 0 auto 12px;
+  }
+
+  .visitor-map {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 22px;
+    overflow: hidden;
+  }
+
+  .visitor-map iframe,
+  .visitor-map img,
+  .visitor-map canvas {
+    max-width: 100% !important;
+  }
+
+  /* 手机端粒子背景稍微变淡 */
+  #tsparticles {
+    opacity: 0.55;
+  }
+}
+
+我看了你现在这版，你的处理思路是对的。现在你只需要改 CSS，不动 HTML，不动 JS。
+
+你的目标：
+
+当前：Yousen Tang 直接显示 ✅
+
+当前：不要蓝色光标 ✅
+
+以后恢复：取消注释即可 ✅
+
+所以只需要处理这一段。
+
+你现在：
+
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+/*这个是姓名打字渐出的特效
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+*/
+建议改成这样：
+
+/* 姓名显示 */
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+
+
+/*
+=============================
+姓名打字机 + 蓝色光标效果
+以后恢复时取消下面注释即可
+=============================
+
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+
+*/
+这样：
+
+现在页面：
+
+Yousen Tang
+没有光标。
+
+以后想恢复：
+
+只需要删除：
+
+/*
+和：
+
+*/
+即可恢复蓝色光标。
+
+另外，你现在这里：
+
+#typed-name {
+  display: inline-flex;
+  align-items: center;
+  white-space: pre;
+}
+可以保留，不影响。
+
+因为它只是控制名字的布局，不产生任何视觉动画。
+
+还有一个小地方，你 HTML 里面：
+
+<!-- <span id="typed-name"></span>-->
+<span id="typed-name">Yousen Tang</span>
+这个也很好，不需要改。你已经把旧的动画版本保存成注释了。
+
+
+JS 那部分以后如果想恢复打字动画也还在，不需要删除。
+
+
+所以目前你的状态就是最合理的：静态科研主页 + 保留未来动画代码入口。
+
+
+Yousen TangYousen Tang现在为啥重复了就是后面第二个tangyousen是打字的
+
+原因很明确：你只注释了光标 CSS，但是打字机 JS 还在运行。
+
+现在页面流程：
+
+HTML 里面已经有：
+
+<span id="typed-name">Yousen Tang</span>
+所以一开始显示：
+
+Yousen Tang
+JS 又执行：
+
+const nameText = "Yousen Tang";  
+const typedName = document.getElementById("typed-name");
+
+...
+
+typedName.textContent += nameText.charAt(i);
+它会继续往这个已有文字后面追加：
+
+Yousen Tang + Yousen Tang
+所以你看到：
+
+Yousen TangYousen Tang
+你现在只需要把 JS 整段注释掉。
+
+找到：
+
+const nameText = "Yousen Tang";  
+const typedName = document.getElementById("typed-name");
+const typingSpeed = 190;
+
+let i = 0;
+
+function typeWriter() {
+  if (i < nameText.length) {
+    typedName.textContent += nameText.charAt(i);
+    i++;
+    setTimeout(typeWriter, typingSpeed); 
+  } else {
+    typedName.classList.add('finished');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  typeWriter();
+});
+改成：
+
+/*
+const nameText = "Yousen Tang";  
+const typedName = document.getElementById("typed-name");
+const typingSpeed = 190;
+
+let i = 0;
+
+function typeWriter() {
+  if (i < nameText.length) {
+    typedName.textContent += nameText.charAt(i);
+    i++;
+    setTimeout(typeWriter, typingSpeed); 
+  } else {
+    typedName.classList.add('finished');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  typeWriter();
+});
+*/
+然后保持：
+
+HTML：
+
+<span id="typed-name">Yousen Tang</span>
+CSS 光标：
+
+保持注释。
+
+最终就是：
+
+Yousen Tang
+没有动画，没有光标。
+
+以后恢复：
+
+HTML 改回：
+
+<span id="typed-name"></span>
+JS 取消注释
+
+光标 CSS 取消注释
+
+即可恢复原来的效果。
+
+你现在的问题不是 CSS，是 JS 还在运行。你文件里这段打字逻辑目前仍然存在。
+
+
+
+<script>
+    /*
+    const nameText = "Yousen Tang";  
+    const typedName = document.getElementById("typed-name");
+    const typingSpeed = 190; // 每个字固定间隔 ms
+  
+    let i = 0;
+  
+    function typeWriter() {
+      if (i < nameText.length) {
+        typedName.textContent += nameText.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed); 
+      } else {
+        typedName.classList.add('finished'); // 打完字后移除光标
+      }
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      typeWriter();
+    });
+    */
+    </script>等下这不是html吗不是<!--这样注释吗为啥这样/*啊以及script要注释掉吗
+
+你问得对，这里需要区分 HTML 注释 和 JavaScript 注释。
+
+你这段：
+
+<script>
+    /*
+    const nameText = "Yousen Tang";  
+    ...
+    */
+</script>
+里面的内容是 JavaScript 代码，所以应该使用：
+
+/*
+  JavaScript代码
+*/
+这是正确的。
+
+为什么不是 <!-- -->？
+<!-- --> 是 HTML 注释，用于注释 HTML 标签，例如：
+
+<!--
+<span id="typed-name">Yousen Tang</span>
+-->
+它告诉浏览器：
+
+这部分 HTML 不要解析。
+
+但是 <script> 标签里面：
+
+<script>
+  const nameText = "Yousen Tang";
+</script>
+里面运行的是 JavaScript。
+
+所以 JavaScript 自己有自己的注释方式：
+
+单行：
+
+// 这是注释
+const nameText = "Yousen Tang";
+多行：
+
+/*
+const nameText = "Yousen Tang";
+const speed = 190;
+*/
+你的写法是否正确？
+是正确的：
+
+<script>
+    /*
+    const nameText = "Yousen Tang";  
+    const typedName = document.getElementById("typed-name");
+    
+    ...
+    */
+</script>
+浏览器看到：
+
+<script>
+</script>
+里面没有可执行 JS，所以不会运行打字动画。
+
+<script> 标签要不要也注释？
+不用。
+
+不要这样：
+
+<!--
+<script>
+...
+</script>
+-->
+虽然有些浏览器还能工作，但现在不推荐，而且以后恢复麻烦。
+
+你现在最好的结构就是：
+
+<script>
+/*
+这里保留未来打字动画代码
+*/
+</script>
+以后恢复时：
+
+删除：
+
+/*
+和：
+
+*/
+即可。
+
+你现在应该保持：
+
+HTML：
+
+<span id="typed-name">Yousen Tang</span>
+CSS 光标：
+
+/*
+#typed-name::after {
+...
+}
+*/
+JS：
+
+/*
+const nameText = "Yousen Tang";
+...
+*/
+这样现在：
+
+Yousen Tang
+以后恢复动画只需要取消两个注释，非常干净。你之前 HTML 里也已经把旧的空 span 保留成注释了，这个思路是一致的。
+
+
+
+image(153).png
+
+粘贴的文本 (1)(16).txt
+文档
+你看看就是现在电脑端他的图片就很小怎么办呢一点也不高级 手机端可以
+
+/* Inter 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 全局样式*/
+body, td, th, tr, p, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
+}
+
+/* 优化最外层表格的内边距 */
+body > table {
+    padding: 20px 10px;
+}
+
+/* 链接样式 - 高级深蓝 */
+a {
+  color: #2563eb; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #dc2626; 
+  text-decoration: none;
+}
+
+/* 加粗文字 */
+strong {
+  font-weight: 600;
+  color: #111827; 
+}
+
+/* 顶部的名字  */
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;         
+  font-weight: 800;        
+  letter-spacing: -0.03em;  
+  color: #111827;
+}
+
+/* 版块标题 */
+h2 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;         
+  font-weight: 700;        
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 20px;     
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;         
+  font-weight: 700;
+  color: #2563eb;          
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+a:hover .papertitle {
+  color: #dc2626;          
+}
+
+/* 段落间距 */
+p {
+  margin-bottom: 12px;
+}
+
+
+tr:has(.one) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
+    border: 1px solid transparent; /* 默认透明边框，防止抖动 */
+    background-color: transparent; /* 默认无背景 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
+}
+
+/* 2. 鼠标放上去的效果 */
+tr:has(.one):hover {
+    background-color: #ffffff; /* 浮现出纯白背景 */
+    border: 1px solid #f3f4f6; /* 淡淡的边框 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
+}
+
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px; 
+  border-radius: 3px;
+}
+
+
+.project-row {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+  border-radius: 8px; 
+}
+
+.project-row:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+  transform: translateY(-2px); 
+}
+
+/* 粒子背景层 */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+/*这个是姓名打字渐出的特效
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+*/
+/* 访客地图*/
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.visitor-map:hover {
+  opacity: 1;
+}
+
+/*适配手机端*/
+@media (max-width: 768px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body > table {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+  }
+
+  table {
+    max-width: 100% !important;
+  }
+
+  /* ========================================
+     顶部个人信息
+     ======================================== */
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px !important;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  /* 头像区域 */
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td:last-child {
+    padding-top: 22px !important;
+    padding-bottom: 4px !important;
+    text-align: center;
+  }
+
+  /* 头像 */
+  img.hoverZoomLink {
+    display: block;
+    width: 165px !important;
+    max-width: 52vw !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  /* 姓名 */
+  .name {
+    padding-top: 8px;
+    margin-bottom: 10px;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  #typed-name {
+    justify-content: center;
+  }
+
+  /* Email / Github / Scholar */
+  .name ~ p:last-child {
+    text-align: center;
+  }
+
+
+  h2 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    font-size: 22px;
+    line-height: 1.3;
+    background: transparent !important;
+  }
+
+  td[style*="padding:16px"][style*="width:100%"] {
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] > tbody > tr > td {
+    width: 100% !important;
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+
+  .project-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+
+    transform: none !important;
+  }
+
+  .project-row > td,
+  .project-row > td p,
+  .project-row > td a,
+  .project-row > td span,
+  .project-row > td strong,
+  .project-row > td em,
+  tr:has(.one) > td {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  .project-row > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .project-row > td:first-child {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .one {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .one img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 220px;
+    margin: 0 auto;
+
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px !important;
+  }
+
+  .papertitle {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 16.5px;
+    line-height: 1.4;
+  }
+
+  .project-row:hover,
+  tr:has(.one):hover {
+    transform: none !important;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+  }
+
+
+  ul {
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  td[style*="padding:16px"][style*="vertical-align:middle"] {
+    box-sizing: border-box;
+  }
+
+
+  .project-row img[style*="max-width: 120px"] {
+    display: block;
+    width: 120px !important;
+    max-width: 42vw !important;
+    height: auto !important;
+    margin: 0 auto 12px;
+  }
+
+  .visitor-map {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 22px;
+    overflow: hidden;
+  }
+
+  .visitor-map iframe,
+  .visitor-map img,
+  .visitor-map canvas {
+    max-width: 100% !important;
+  }
+
+  /* 手机端粒子背景稍微变淡 */
+  #tsparticles {
+    opacity: 0.55;
+  }
+}
+
+我看了你的截图和 CSS，问题原因很明确：
+
+你的电脑端图片小，是因为这里：
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+}
+以及 HTML：
+
+<td style="padding:16px;width:25%;vertical-align:middle">
+项目图片所在列只有 25% 宽度，然后 .one 又限制最大宽度 260px，所以最终图片非常小。你的 HTML 项目图片列确实设置了 width:25% / width:20%。
+
+ 
+
+
+手机端没问题，是因为你在：
+
+@media (max-width:768px)
+里面覆盖了：
+
+.one {
+  width:100%;
+  max-width:320px;
+}
+所以手机端正常。
+
+推荐修改（只影响电脑端）
+不要改 HTML，只改 .one。
+
+把现在：
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+替换成：
+
+.one {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+图片：
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 8px !important;
+  border: 1px solid #f0f0f0;
+}
+效果：
+
+现在：
+
+[小图]     R4Det标题
+           描述文字
+会变成：
+
+[  更大的图  ]     R4Det标题
+                  描述文字
+更像现在顶会个人主页的风格。
+
+如果想更高级一点（我更推荐）
+你的项目区域实际上图片比例偏小，可以直接让电脑端图片占 30%：
+
+加：
+
+@media (min-width:769px) {
+
+  .project-row > td:first-child {
+    width: 30% !important;
+  }
+
+  .project-row > td:nth-child(2) {
+    width: 70% !important;
+  }
+
+  .one {
+    max-width: 340px;
+  }
+
+}
+这样：
+
+电脑端图片更突出
+
+手机端完全不影响
+
+项目介绍文字仍然有足够空间
+
+另外我注意到你的图片本身是论文结构图，不是照片，所以现在 object-fit: contain 的思路是对的，不应该裁剪。
+
+我建议最终：
+
+.one {
+  max-width:340px;
+}
+
+.one img {
+  border-radius:8px !important;
+}
+基本就是 NeurIPS / CVPR researcher homepage 常见比例。
+
+你的手机端不用动，现在主要就是桌面 .one max-width:260px 太保守。
+
+
+image(154).png
+不是啊现在就是各个图片长宽比不一样咋办呢，下面众安那个就正好但是上面那两篇论文的图片就不行太长了导致整体很小‘’
+
+明白了，你这个问题不是 max-width 的问题，而是图片 aspect ratio 不一致导致的。
+
+现在：
+
+R4Det / 3DVLA 是横向很长的 framework diagram
+
+ZhongAn 是接近正方形 logo
+
+你的 CSS：
+
+.one img {
+  width: 100%;
+  height: auto;
+}
+意味着：
+
+保持原始比例 → 横向图会变得很矮
+
+所以 R4Det 即使宽度扩大，高度还是很小，看起来像一个小缩略图。
+
+推荐方案：电脑端固定图片展示框 + contain
+不要让每张图片自由高度，而是给图片区域统一一个视觉高度。
+
+只改电脑端 .one img：
+
+把现在：
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+换成：
+
+.one {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  display: block;
+
+  border-radius: 8px !important;
+  border: 1px solid #f0f0f0;
+}
+效果：
+
++----------------+
+|                |
+|  R4Det diagram |
+|                |
++----------------+
+
++----------------+
+|                |
+|  3DVLA diagram |
+|                |
++----------------+
+
++----------------+
+|    ZhongAn     |
+|      logo      |
++----------------+
+所有图片视觉大小一致。
+
+但是论文图还是偏小怎么办？
+你的 R4Det 图其实信息密度高，建议稍微扩大：
+
+.one {
+  max-width: 340px;
+  height: 200px;
+}
+我觉得你的主页最佳参数：
+
+.one {
+  width: 100%;
+  max-width: 340px;
+  height: 200px;
+}
+手机端不要改
+你手机端已经有：
+
+@media (max-width:768px) {
+
+.one {
+  width:100%;
+  max-width:320px;
+}
+
+.one img {
+  height:auto !important;
+}
+}
+所以手机仍然：
+
+图片自然比例
+
+不裁剪
+
+自适应宽度
+
+不要动。
+
+另外一个更高级的方案（CV researcher homepage 常见）
+给不同图片加 class：
+
+例如：
+
+<img class="wide-figure" src="images/r4det.jpg">
+<img class="wide-figure" src="images/3dvla.png">
+<img src="images/zhongan.jpg">
+然后：
+
+.wide-figure {
+  transform: scale(1.15);
+}
+让论文框架图稍微放大。
+
+因为你的情况：
+
+论文结构图 = 需要放大阅读
+
+logo/照片 = 正常比例
+
+这是很多实验室主页的处理方式。
+
+我建议你现在直接用第一种：
+
+.one {
+  max-width:340px;
+  height:200px;
+}
+
+.one img {
+  height:100%!important;
+  object-fit:contain;
+}
+这是最干净的，不需要改 HTML，而且电脑端、手机端互不影响。你的 HTML 图片本身只是普通 <img width=100%>，所以 CSS 控制即可。
+
+ 
+
+
+
+https://cby-pku.github.io/publications/就是你看他的这个网站的图片就有很好的质感我的也学着可以拉宽主体然后参考一下
+
+我看了你说的那个风格（类似 CVPR/ML researcher homepage），你的感觉是对的：不是单纯放大图片，而是整体主体宽度 + 图片区域比例设计的问题。 这类主页一般不会把图片限制在一个很窄的小栏里，而是给 publication card 一个更宽的横向空间，让 figure 有足够呼吸感。
+
+你现在的问题：
+
+| 小图 | 大段文字 |
+你的主体：
+
+body > table {
+    max-width:1000px;
+}
+再加：
+
+.one {
+  max-width:260px;
+}
+导致图片区域实际上只有：
+
+1000px * 25% ≈ 250px
+所以论文结构图必然小。
+
+我建议你参考这种风格：
+1. 主体稍微拉宽
+你现在：
+
+body > table {
+    padding:20px 10px;
+}
+但是 HTML 里面：
+
+<table style="width:100%;max-width:1000px">
+限制了最大宽度。
+
+改 HTML 不想动的话，可以 CSS 覆盖：
+
+加到最下面：
+
+@media (min-width:769px){
+
+body > table {
+    max-width:1200px !important;
+}
+
+}
+这样桌面：
+
+1000px → 1200px
+
+文字和图片都会舒服很多。
+
+2. 图片区域增加比例
+现在你的图片：
+
+.one {
+  max-width:260px;
+}
+改成：
+
+@media (min-width:769px){
+
+.one {
+  width:100%;
+  max-width:360px;
+  height:200px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.one img {
+  width:100% !important;
+  height:100% !important;
+
+  object-fit:contain;
+
+  border-radius:8px !important;
+}
+
+}
+重点：
+
+不是：
+
+图片原比例
+↓
+横图变很矮
+而是：
+
+固定展示框
+↓
+图片居中适配
+3. 图片和文字比例调整
+你的 HTML：
+
+R4Det：
+
+<td width=25%>
+其它：
+
+<td width=20%>
+这个比例太小。
+
+加：
+
+@media (min-width:769px){
+
+.project-row > td:first-child {
+    width:32% !important;
+}
+
+.project-row > td:nth-child(2){
+    width:68% !important;
+}
+
+}
+效果：
+
+现在：
+
+[20%] image [80%] text
+变：
+
+[32%] image [68%] text
+更接近论文主页。
+
+最终我建议你的桌面参数：
+直接加在 CSS 最后：
+
+/* Desktop publication layout */
+@media (min-width:769px){
+
+body > table {
+    max-width:1200px !important;
+}
+
+
+.project-row > td:first-child {
+    width:32% !important;
+}
+
+
+.project-row > td:nth-child(2){
+    width:68% !important;
+}
+
+
+.one {
+    width:100%;
+    max-width:360px;
+    height:200px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.one img {
+
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:contain;
+
+    border-radius:8px !important;
+}
+
+}
+你的手机端完全不用改，因为它在：
+
+@media(max-width:768px)
+里面，会覆盖这些。
+
+最终效果大概：
+
+现在：
+
+[小图] R4Det title
+       description
+改后：
+
+[        R4Det figure        ]  title
+                               description
+
+
+[        3DVLA figure        ]  title
+                               description
+会明显更像 CVPR/机器人方向 researcher homepage。
+
+另外你的内容本身（R4Det、3DVLA）图片属于论文框架图，不是 thumbnail，所以现在缩小显示确实损失质感。
+
+ 
+
+
+我建议先只加这一段，不动前面的 CSS。这样回退也方便。
+
+
+https://cby-pku.github.io/publications/就是你看他的这个网站的图片就有很好的质感我的也学着可以拉宽主体然后参考一下，感觉是不是每一条项目的宽度都要随着我的图片也要变啊，我的意思是每个项目条的上下宽度得加大很多啊不然显得图片太小了小家子气，我不会裁剪什么论文图啥的就是把图片按照chenboyuan网站的比例来放就行，
+
+思考了 1m 50s
+对，你这次说的重点是对的：不是把所有图片塞进同样尺寸的框，也不是裁剪论文图，而是把整条 publication item 做得更宽、更高，同时给图片列更大比例。
+
+参考页面的 publication 都是统一宽度的“图片 + 文字”条目，并不是每条的总宽度随着图片变化；视觉质感主要来自较宽的内容区域、稳定的图片列和充足的上下留白。
+
+你应该采用：
+
+每个项目条总宽度一致
+
+主体从 1000px 拉到约 1280px
+
+图片列从现在的 20%–25% 增加到约 40%
+
+每条项目上下增加约 30px 内边距
+
+图片保持原始长宽比，不裁剪
+
+横向论文图尽量铺满图片列
+
+正方形图片限制最大高度，避免众安 Logo 变得巨大
+
+你当前 HTML 的论文图片列确实分别写了 25% 和 20%，这就是它们显得“小家子气”的主要原因。
+
+ 
+
+
+第一步：只给论文项目表加一个 class
+找到 Publications 下方这一行：
+
+<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+改成：
+
+<table class="publications-table"
+       style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+只增加：
+
+class="publications-table"
+这样不会误伤下面的 Misc 和 Baibai。
+
+第二步：把下面整段放到 CSS 最后
+放在你现有手机端 @media (max-width: 768px) { ... } 的后面：
+
+/* ========================================
+   电脑端 Publications 宽版布局
+   手机端不受影响
+   ======================================== */
+@media (min-width: 769px) {
+
+  /* 整个网站主体拉宽 */
+  body > table {
+    width: calc(100% - 48px) !important;
+    max-width: 1280px !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box;
+  }
+
+  /* 项目之间增加纵向空间 */
+  .publications-table {
+    border-spacing: 0 22px !important;
+  }
+
+  /* 每条项目做得更高、更舒展 */
+  .publications-table .project-row > td {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    vertical-align: middle !important;
+  }
+
+  /* 图片列：约占 40% */
+  .publications-table .project-row > td:first-child {
+    width: 40% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* 文字列：约占 60% */
+  .publications-table .project-row > td:nth-child(2) {
+    width: 60% !important;
+    padding-left: 10px !important;
+    padding-right: 30px !important;
+  }
+
+  /* 图片展示区域 */
+  .publications-table .one {
+    width: 100%;
+    max-width: none;
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+  }
+
+  /* 保持图片原始比例，不裁剪、不拉伸 */
+  .publications-table .one img {
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 100% !important;
+    max-height: 235px;
+
+    object-fit: contain;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px !important;
+
+    box-shadow:
+      0 2px 6px rgba(15, 23, 42, 0.05),
+      0 10px 24px rgba(15, 23, 42, 0.04);
+  }
+
+  /* 卡片内部背景透明，避免全局 td 背景盖住效果 */
+  .publications-table .project-row > td,
+  .publications-table .project-row p,
+  .publications-table .project-row a,
+  .publications-table .project-row span,
+  .publications-table .project-row strong,
+  .publications-table .project-row em {
+    background: transparent !important;
+  }
+
+  /* 每条项目的轻微卡片质感 */
+  .publications-table .project-row {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+  }
+
+  .publications-table .project-row:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    transform: translateY(-3px);
+  }
+}
+这段代码为什么适合你
+你的两个论文框架图大约是横向 2.2:1 左右。图片列扩大后，假设实际可用宽度约 450px，论文图的高度会自然达到约 200px：
+
+450 ÷ 2.2 ≈ 205px
+因此它们会明显比现在大，但仍保持完整，不会裁剪。
+
+众安图片接近正方形。由于设置了：
+
+max-height: 235px;
+它不会因为图片列变宽而膨胀成四五百像素，而是维持约：
+
+235px × 235px
+所以最终大致会是：
+
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│   [      宽大的 R4Det 完整框架图      ]   标题与项目介绍    │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│   [      宽大的 3DVLA 完整框架图      ]   标题与项目介绍    │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│          [ 适中尺寸众安 Logo ]          项目介绍             │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+不要再使用固定宽高拉伸
+不要使用这种写法：
+
+.one img {
+  width: 100%;
+  height: 200px;
+}
+这会拉伸图片。
+
+也不要使用：
+
+object-fit: cover;
+这会裁掉论文框架图。
+
+你这里正确的组合就是：
+
+width: auto;
+height: auto;
+max-width: 100%;
+max-height: 235px;
+object-fit: contain;
+这样每条项目的总体宽度统一，项目条本身通过 padding 变高，图片按原始比例自然放大；这才比较接近你想要的参考网站质感。
+
+
+
+粘贴的文本 (1)(17).txt
+文档
+
+粘贴的文本 (2).txt
+文档
+这样可以吗
+
+思考了 1m 13s
+可以，整体结构已经放对了：
+
+HTML 已经只给论文/项目表加了 class="publications-table"，不会误伤 Education、Misc 和 Baibai。
+
+
+桌面端代码位于手机端媒体查询之后，并且使用 min-width: 769px，手机端不会受影响。
+
+
+主体已经拉宽至 1280px，图片列和文字列调整为 40% / 60%，项目条也增加了上下留白。
+
+
+这与参考页面的总体思路一致：每条 publication 都保持统一的图文两栏结构，而不是每条项目宽度随着图片长宽比变化。
+
+不过还建议改一个关键点。你目前写的是：
+
+.publications-table .one img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 235px;
+}
+这只能保证图片“不超过容器”，不能保证横向论文图主动铺满图片列。假如原图本身尺寸较小，还是可能显示得偏小。
+
+
+给横向论文图增加 class
+R4Det 改成：
+
+<img
+  class="wide-publication-image"
+  src="images/r4det.jpg"
+  alt="R4Det framework"
+>
+3DVLA 改成：
+
+<img
+  class="wide-publication-image"
+  src="images/3dvla.png"
+  alt="3DVLA framework"
+>
+MAPF 如果也是横向图，也同样增加：
+
+class="wide-publication-image"
+众安 Logo 不加这个 class。
+
+然后在桌面端代码中替换图片部分
+把你当前的：
+
+.publications-table .one img {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: 235px;
+
+  object-fit: contain;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px !important;
+
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.05),
+    0 10px 24px rgba(15, 23, 42, 0.04);
+}
+完整替换为：
+
+/* 所有项目图片：保持原始比例，不裁剪 */
+.publications-table .one img {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: 235px;
+
+  object-fit: contain;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px !important;
+
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.05),
+    0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+/* 横向论文框架图主动铺满图片列 */
+.publications-table .one img.wide-publication-image {
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none;
+
+  object-fit: contain;
+}
+这样桌面端会是：
+
+R4Det、3DVLA：按照原始比例铺满约 40% 的图片列，不裁剪、不变形
+
+众安 Logo：仍限制在最高 235px，不会膨胀得特别大
+
+每条项目总宽度保持一致
+
+项目条高度由图片和文字内容自然决定，同时保留上下 30px 留白
+
+手机端维持你现在的单列布局
+
+因此你现在的版本基本可以，只需要增加这个横向图片 class，才真正解决“宽论文图因为比例太长而显得小”的问题。
+
+
+image(155).png
+
+粘贴的文本 (1)(18).txt
+文档
+
+粘贴的文本 (2)(1).txt
+文档
+什么鬼啊感觉没变化啊这个图片展比还是很小啊认真一点来改详细说怎么改
+
+思考了 2m 8s
+你现在确实没有真正把论文图放大。项目条变高了，但图片本身仍按原始像素宽度显示，所以左边只是多出了一块空白。
+
+问题就在这两句：
+
+width: auto !important;
+max-height: 235px;
+width: auto 不会主动把图片撑满图片列；而 .one 的 min-height: 220px 只会增大容器，不会增大图片。
+
+
+而且你当前 HTML 里的 R4Det 和 3DVLA 图片仍然只是普通 <img>，没有之前提到的特殊 class，所以对应的放大规则根本没有生效。
+
+ 
+
+
+参考页面的核心是每篇 publication 使用稳定的图文两栏和相对充足的缩略图空间，而不是单纯增加一个空图片框。
+
+第一步：修改四张图片的 HTML
+R4Det
+把：
+
+<img src='images/r4det.jpg' width=100%>
+改成：
+
+<img src="images/r4det.jpg" alt="R4Det framework">
+3DVLA
+把：
+
+<img src='images/3dvla.png' width=100%>
+改成：
+
+<img src="images/3dvla.png" alt="3DVLA framework">
+众安
+众安是正方形 Logo，给它一个单独的 class：
+
+<img
+  class="compact-figure"
+  src="images/zhongan.jpg"
+  alt="ZhongAn Information Technology"
+>
+MAPF
+<img src="images/mapf.gif" alt="MAPF project">
+也就是说：
+
+论文框架图和 MAPF：默认铺满图片列
+
+众安 Logo：单独限制大小
+
+所有图片都保持原比例
+
+不裁剪、不拉伸
+
+第二步：完整替换电脑端媒体查询
+把你 CSS 最后从：
+
+/*电脑端宽版布局*/
+@media (min-width: 769px) {
+开始，一直到最后对应的：
+
+}
+整段删除并替换成下面这一版：
+
+/* ========================================
+   电脑端宽版 Publications 布局
+   手机端不受影响
+   ======================================== */
+@media (min-width: 769px) {
+
+  /* 整体主体拉宽 */
+  body > table {
+    width: calc(100% - 48px) !important;
+    max-width: 1400px !important;
+    padding: 28px 24px !important;
+    box-sizing: border-box;
+  }
+
+  /* 固定 Publications 的两栏比例 */
+  .publications-table {
+    width: 100% !important;
+    table-layout: fixed;
+    border-collapse: separate !important;
+    border-spacing: 0 26px !important;
+  }
+
+  /* 每条项目整体样式 */
+  .publications-table .project-row {
+    border-radius: 16px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  /* 每个项目的两个单元格 */
+  .publications-table .project-row > td {
+    vertical-align: middle !important;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* 图片列：42% */
+  .publications-table .project-row > td:first-child {
+    width: 42% !important;
+
+    padding-top: 38px !important;
+    padding-right: 18px !important;
+    padding-bottom: 38px !important;
+    padding-left: 22px !important;
+
+    border-radius: 16px 0 0 16px;
+  }
+
+  /* 文字列：58% */
+  .publications-table .project-row > td:nth-child(2) {
+    width: 58% !important;
+
+    padding-top: 38px !important;
+    padding-right: 36px !important;
+    padding-bottom: 38px !important;
+    padding-left: 16px !important;
+
+    border-radius: 0 16px 16px 0;
+  }
+
+  /* 图片容器必须真正占满图片列 */
+  .publications-table .one {
+    display: block;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 默认项目图片：
+     真正铺满图片列，同时保持原始长宽比 */
+  .publications-table .one img {
+    display: block;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+
+    object-fit: contain;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px !important;
+
+    box-shadow:
+      0 3px 8px rgba(15, 23, 42, 0.05),
+      0 12px 28px rgba(15, 23, 42, 0.06);
+  }
+
+  /* 正方形 Logo 不铺满整列，防止过大 */
+  .publications-table .one img.compact-figure {
+    width: 235px !important;
+    max-width: 72% !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto;
+  }
+
+  /* 清除全局背景对项目内容的覆盖 */
+  .publications-table .project-row p,
+  .publications-table .project-row a,
+  .publications-table .project-row span,
+  .publications-table .project-row strong,
+  .publications-table .project-row em {
+    background: transparent !important;
+  }
+
+  /* 项目标题稍微放大 */
+  .publications-table .papertitle {
+    display: inline-block;
+    margin-bottom: 5px;
+
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  /* 项目介绍与上方信息拉开距离 */
+  .publications-table .project-row > td:nth-child(2) p {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  /* 桌面端悬停效果 */
+  .publications-table .project-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
+  }
+
+  .publications-table .project-row:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+修改后为什么会明显变大
+假设主体实际内容宽度大约为 1300px：
+
+图片列：1300 × 42% ≈ 546px
+减去左右 padding：546 - 40 ≈ 506px
+因此 R4Det 会显示为大约：
+
+宽度约 500px
+高度约 220px
+而不是现在大约：
+
+宽度约 330px
+高度约 145px
+项目条上下还有：
+
+38px + 38px
+的纵向留白，所以整条项目会更高、更舒展，不会显得局促。
+
+众安 Logo 则因为有：
+
+.compact-figure {
+  width: 235px !important;
+}
+不会被强行放到 500px。
+
+第三步：强制刷新
+改完上传后，在浏览器按：
+
+Ctrl + F5
+如果 GitHub Pages 仍然显示旧 CSS，把 HTML 中：
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+临时改成：
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css?v=2">
+这次真正决定图片变大的规则是：
+
+.publications-table .one img {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+}
+不要再写回 width: auto，否则横向论文图又会恢复成现在的小尺寸。
+
+
+image(156).png
+image(157).png
+现在这个杂项也单独来个类和格式因为这个鸟的照片也太小了以及这个mapf的正方形好像也有点小<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Tang Yousen - Personal Homepage</title>
+    <meta name="description" content="Tang Yousen is an undergraduate researcher in 3D Vision, Embodied AI and Vision-Language-Action models at Tongji University.">
+    <meta name="robots" content="index, follow">
+    <meta name="msvalidate.01" content="4B0876AB4E26FC2BF9CA0BDBE9F73D06" />
+    <link rel="canonical" href="https://tangyousen.github.io/">
+    <meta name="google-site-verification" content="5zCJWr-kbOzQXHy2I_jB9sPPTru2S6TJDm4tB0npMJU" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Yousen Tang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  </head>
+
+  <body>
+  <div id="tsparticles"></div>
+    <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name">
+                  <!-- <span id="typed-name"></span>-->
+                  <span id="typed-name">Yousen Tang</span>
+                </p>
+                <p>
+                  I am an undergraduate student in Computer Science at <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a> (Class of 2027). I currently work as a Research Assistant at the VDIG Group, Peking University.
+                </p>
+                <p>
+                  My research aims to advance <strong>Embodied AI and 3D Perception</strong>, focusing on multimodal fusion and equipping Vision-Language-Action models with physical and geometric reasoning capabilities.
+                </p>
+                </p>
+                <p>
+                  <a href="mailto:tangyousen@tongji.edu.cn">Email</a> &nbsp;/&nbsp;
+                  <!-- <a href="data/Tang Resume-EN.pdf">CV</a> &nbsp;/&nbsp; -->
+                  <a href="https://github.com/TangYousen">Github</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=cRdH5LgAAAAJ&hl=zh-CN&oi=ao" target="_blank">Google Scholar</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/个人照.jpg"><img style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" src="images/个人照.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>News</h2>
+                <ul>
+                  <li><strong>[May 2026]</strong> <strong style="color: #cc0000;">Actively seeking</strong> research and internship opportunities in 3D Vision, Embodied AI, and Vision-Language-Action (VLA) models.</li>
+                  <li><strong>[Feb 2026]</strong> Our paper <em>"R4Det: 4D Radar-Camera Fusion..."</em> was accepted to <strong style="color: #cc0000;">CVPR 2026</strong>!</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Publications & Research Experience</h2>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="publications-table" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr class="project-row">
+              <td style="padding:16px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/r4det.jpg" alt="R4Det framework">
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">R4Det: 4D Radar-Camera Fusion for High-Performance 3D Object Detection</span>
+                <br>
+                <strong>Role</strong>: Student Lead Author & Core Contributor
+                <br>
+                Research Assistant, Peking University (VDIG Group)
+                <br>
+                <em>CVPR</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2603.11566" target="_blank">arXiv</a> 
+                /
+                <a href="https://github.com/VDIGPKU/R4Det" target="_blank">Code</a>
+                <p>
+                  Contributed to <strong>R4Det</strong>, a radar-camera fusion framework addressing the inherent sparsity of 4D radar and geometric contamination. Designed and implemented core components for depth-aware fusion, temporal alignment, and instance-guided refinement, achieving strong performance on TJ4DRadSet and VoD datasets.
+                </p>
+              </td>
+            </tr>
+            
+            <tr class="project-row">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/3dvla.png" alt="3DVLA framework">
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                
+                <span class="papertitle">3DVLA: Enhancing Vision-Language-Action Models with 3D Understanding</span>
+                
+                <br>
+                <strong>Role</strong>: Student Lead Author & Core Contributor
+                <br>
+                Research Assistant, Peking University (VDIG Group)
+                <br>
+                <em>Feb 2026 - Present</em>
+                <br>
+                <a href="https://arxiv.org/abs/2605.29416" target="_blank">arXiv</a>
+                <p>
+                  Contributed to <strong>3DVLA</strong>, a plug-and-play framework that injects robust 3D scene understanding into pre-trained 2D VLA models without disrupting their language priors. Developed core modules for coordinate-driven self-supervision and uncertainty-guided routing to synthesize occluded geometries, improving manipulation performance on LIBERO-Plus and RoboTwin 2.0 benchmarks.
+                </p>
+              </td>
+            </tr>
+
+            <tr class="project-row">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <img class="compact-figure" src="images/zhongan.jpg" alt="ZhongAn Information Technology">
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                
+                <span class="papertitle">Conversational Data Analysis System (Data Insight Agent)</span>
+                
+                <br>
+                R&D Intern, ZhongAn Information Technology
+                <br>
+                <em>Jul 2025 - Sep 2025</em>
+                <p></p>
+                <p>
+                Engineered an LLM-driven agentic workflow for automated data querying. Optimized model routing, improving intent classification accuracy by 3.8% while reducing inference overhead. Recognized with "Outstanding Individual" award.
+                </p>
+              </td>
+            </tr>
+
+            <tr class="project-row">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <img src="images/mapf.gif" alt="MAPF project">
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                
+                <span class="papertitle">Multi-Agent Path Planning (MAPF) in Dynamic Environments</span>
+                
+                <br>
+                SITP Project Lead, Tongji University
+                <br>
+                <em>Dec 2023 - Jan 2025</em>
+                <p></p>
+                <p>
+                Implemented A* for single-agent and Conflict-Based Search (CBS) for multi-agent coordination. Applied simulation algorithms based on PIBT for efficient AGV planning.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Education</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:16px;width:100%;vertical-align:middle">
+              <strong>Tongji University</strong>, Shanghai, China<br>
+              B.E. in Computer Science and Technology<br>
+              <em>Sep 2023 - Jun 2027 (Expected)</em><br>
+            </td>
+          </tr>
+          </tbody></table>
+
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Misc</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr class="project-row">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src='images/baibai.jpg' width=100% style="max-width: 120px;">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <strong>Baibai</strong><br>
+                Baibai is my pet bird and an important companion in my daily life.  
+                Outside of research, I enjoy spending time with Baibai — a small reminder to slow down and appreciate simple moments.
+              </td>
+            </tr>
+          </tbody></table>
+         <div class="visitor-map">
+            <script
+              type="text/javascript"
+              id="mapmyvisitors"
+              src="https://mapmyvisitors.com/map.js?d=rPHF1Qb_u0FNBolsijceConLUhhe4AqgGIzJV1zHYcQ&cl=ffffff&w=280">
+            </script>
+          </div>
+          <p style="text-align:center; margin-top: 40px; color: #888; font-size: 14px;">
+            © 2026 Yousen Tang
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+    <script>
+    /*
+    const nameText = "Yousen Tang";  
+    const typedName = document.getElementById("typed-name");
+    const typingSpeed = 190; // 每个字固定间隔 ms
+  
+    let i = 0;
+  
+    function typeWriter() {
+      if (i < nameText.length) {
+        typedName.textContent += nameText.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed); 
+      } else {
+        typedName.classList.add('finished'); // 打完字后移除光标
+      }
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      typeWriter();
+    });
+    */
+    </script>
+    <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: {
+        enable: false
+      },
+    
+      background: {
+        color: {
+          value: "#f8fafc"
+        }
+      },
+    
+      fpsLimit: 60,
+    
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            area: 800
+          }
+        },
+    
+        color: {
+          value: "#9ca3af"
+        },
+    
+        links: {
+          enable: true,
+          distance: 140,
+          color: "#d1d5db",
+          opacity: 0.35,
+          width: 1
+        },
+    
+        move: {
+          enable: true,
+          speed: 0.6,
+          outModes: {
+            default: "bounce"
+          }
+        },
+    
+        opacity: {
+          value: 0.6
+        },
+    
+        size: {
+          value: { min: 1, max: 3 }
+        }
+      },
+    
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "repulse"
+          },
+          resize: true
+        },
+    
+        modes: {
+          repulse: {
+            distance: 90,
+            duration: 0.4
+          }
+        }
+      },
+    
+      detectRetina: true
+    });
+    </script>
+  </body>
+</html>
+
+/* Inter 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 全局样式*/
+body, td, th, tr, p, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15.5px; 
+  line-height: 1.65; /*行高 */
+  color: #374151;   /* 深灰色 */
+  background-color: #fafafa; /* 网页底色换成极其微弱的灰白色 */
+  background: #f8fafc;
+}
+
+/* 优化最外层表格的内边距 */
+body > table {
+    padding: 20px 10px;
+}
+
+/* 链接样式 - 高级深蓝 */
+a {
+  color: #2563eb; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #dc2626; 
+  text-decoration: none;
+}
+
+/* 加粗文字 */
+strong {
+  font-weight: 600;
+  color: #111827; 
+}
+
+/* 顶部的名字  */
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;         
+  font-weight: 800;        
+  letter-spacing: -0.03em;  
+  color: #111827;
+}
+
+/* 版块标题 */
+h2 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;         
+  font-weight: 700;        
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 20px;
+  margin-bottom: 20px;     
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb; /* 浅灰分割线 */
+}
+
+/* 论文/项目标题 */
+.papertitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;         
+  font-weight: 700;
+  color: #2563eb;          
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+a:hover .papertitle {
+  color: #dc2626;          
+}
+
+/* 段落间距 */
+p {
+  margin-bottom: 12px;
+}
+
+
+tr:has(.one) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 动画曲线 */
+    border: 1px solid transparent; /* 默认透明边框，防止抖动 */
+    background-color: transparent; /* 默认无背景 */
+    border-radius: 12px; /* 给整个行加上微小圆角 */
+}
+
+/* 2. 鼠标放上去的效果 */
+tr:has(.one):hover {
+    background-color: #ffffff; /* 浮现出纯白背景 */
+    border: 1px solid #f3f4f6; /* 淡淡的边框 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    transform: translateY(-3px); /* 整个行上浮 */
+}
+
+
+.one {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100% !important;
+  height: auto !important; 
+  display: block;
+  border-radius: 0px !important;
+  border: 1px solid #f0f0f0; 
+}
+
+.project-row {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-row:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px; 
+  border-radius: 3px;
+}
+
+
+.project-row {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+  border-radius: 8px; 
+}
+
+.project-row:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+  transform: translateY(-2px); 
+}
+
+/* 粒子背景层 */
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+#typed-name {
+  display: inline-flex;
+  align-items: center;   
+  white-space: pre;    
+}
+/*这个是姓名打字渐出的特效
+#typed-name::after {
+  content: "";
+  display: inline-block;
+  width: 5px;           
+  height: 0.9em;        
+  background: #2563eb;
+  margin-left: 2px;     
+}
+
+#typed-name.finished::after {
+  display: none;         
+}
+*/
+/* 访客地图*/
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.visitor-map:hover {
+  opacity: 1;
+}
+
+/*适配手机端*/
+@media (max-width: 768px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body > table {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+  }
+
+  table {
+    max-width: 100% !important;
+  }
+
+  /* ========================================
+     顶部个人信息
+     ======================================== */
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px !important;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  /* 头像区域 */
+  body > table > tbody > tr > td
+  > table:first-of-type > tbody > tr > td:last-child {
+    padding-top: 22px !important;
+    padding-bottom: 4px !important;
+    text-align: center;
+  }
+
+  /* 头像 */
+  img.hoverZoomLink {
+    display: block;
+    width: 165px !important;
+    max-width: 52vw !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  /* 姓名 */
+  .name {
+    padding-top: 8px;
+    margin-bottom: 10px;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  #typed-name {
+    justify-content: center;
+  }
+
+  /* Email / Github / Scholar */
+  .name ~ p:last-child {
+    text-align: center;
+  }
+
+
+  h2 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    font-size: 22px;
+    line-height: 1.3;
+    background: transparent !important;
+  }
+
+  td[style*="padding:16px"][style*="width:100%"] {
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  table[style*="padding:16px"] > tbody > tr > td {
+    width: 100% !important;
+    padding: 10px 4px !important;
+    background: transparent !important;
+  }
+
+  .project-row {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+
+    transform: none !important;
+  }
+
+  .project-row > td,
+  .project-row > td p,
+  .project-row > td a,
+  .project-row > td span,
+  .project-row > td strong,
+  .project-row > td em,
+  tr:has(.one) > td {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  .project-row > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .project-row > td:first-child {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .one {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .one img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 220px;
+    margin: 0 auto;
+
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px !important;
+  }
+
+  .papertitle {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 16.5px;
+    line-height: 1.4;
+  }
+
+  .project-row:hover,
+  tr:has(.one):hover {
+    transform: none !important;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+  }
+
+
+  ul {
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  td[style*="padding:16px"][style*="vertical-align:middle"] {
+    box-sizing: border-box;
+  }
+
+
+  .project-row img[style*="max-width: 120px"] {
+    display: block;
+    width: 120px !important;
+    max-width: 42vw !important;
+    height: auto !important;
+    margin: 0 auto 12px;
+  }
+
+  .visitor-map {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 22px;
+    overflow: hidden;
+  }
+
+  .visitor-map iframe,
+  .visitor-map img,
+  .visitor-map canvas {
+    max-width: 100% !important;
+  }
+
+  /* 手机端粒子背景稍微变淡 */
+  #tsparticles {
+    opacity: 0.55;
+  }
+}
+/* 电脑端 */
+@media (min-width: 769px) {
+
+  body > table {
+    width: calc(100% - 48px) !important;
+    max-width: 1400px !important;
+    padding: 28px 24px !important;
+    box-sizing: border-box;
+  }
+
+  .publications-table {
+    width: 100% !important;
+    table-layout: fixed;
+    border-collapse: separate !important;
+    border-spacing: 0 26px !important;
+  }
+
+  /* 每条项目整体样式 */
+  .publications-table .project-row {
+    border-radius: 16px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .publications-table .project-row > td {
+    vertical-align: middle !important;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* 图片列：42% */
+  .publications-table .project-row > td:first-child {
+    width: 42% !important;
+
+    padding-top: 38px !important;
+    padding-right: 18px !important;
+    padding-bottom: 38px !important;
+    padding-left: 22px !important;
+
+    border-radius: 16px 0 0 16px;
+  }
+
+  /* 文字列：58% */
+  .publications-table .project-row > td:nth-child(2) {
+    width: 58% !important;
+
+    padding-top: 38px !important;
+    padding-right: 36px !important;
+    padding-bottom: 38px !important;
+    padding-left: 16px !important;
+
+    border-radius: 0 16px 16px 0;
+  }
+
+  /* 图片容器必须真正占满图片列 */
+  .publications-table .one {
+    display: block;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 默认项目图片：
+     真正铺满图片列，同时保持原始长宽比 */
+  .publications-table .one img {
+    display: block;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+
+    object-fit: contain;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px !important;
+
+    box-shadow:
+      0 3px 8px rgba(15, 23, 42, 0.05),
+      0 12px 28px rgba(15, 23, 42, 0.06);
+  }
+
+  .publications-table .one img.compact-figure {
+    width: 235px !important;
+    max-width: 72% !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto;
+  }
+
+  .publications-table .project-row p,
+  .publications-table .project-row a,
+  .publications-table .project-row span,
+  .publications-table .project-row strong,
+  .publications-table .project-row em {
+    background: transparent !important;
+  }
+
+  .publications-table .papertitle {
+    display: inline-block;
+    margin-bottom: 5px;
+
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .publications-table .project-row > td:nth-child(2) p {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .publications-table .project-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
+  }
+
+  .publications-table .project-row:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+就这俩也学着上面的来就行不用再搞别的
+}
+
+对，就只处理 MAPF 和 Misc/Baibai，其他 publication 布局不动。
+
+1. MAPF 图片增加专用 class
+把：
+
+<img src="images/mapf.gif" alt="MAPF project">
+改成：
+
+<img class="mapf-figure" src="images/mapf.gif" alt="MAPF project">
+然后在你现有的：
+
+@media (min-width: 769px) {
+里面，最后一个 } 前加入：
+
+/* MAPF 是接近正方形的图片，单独放大 */
+.publications-table .one img.mapf-figure {
+  transform: scale(1.14);
+  transform-origin: center;
+
+  /* 保持完整比例，不裁剪 */
+  object-fit: contain;
+}
+
+/* 允许放大后的 MAPF 图片超出原容器一点 */
+.publications-table .one {
+  overflow: visible;
+}
+这里使用 scale(1.14)，因为你现在普通项目图片已经是 width: 100%，继续写 width: 100% 不会有任何变化。这个规则会让 MAPF 在现有图片列内视觉放大约 14%，但不会裁剪或拉伸。
+
+觉得还小可以改成：
+
+transform: scale(1.20);
+建议先用 1.14。
+
+2. 给 Misc 表格单独增加 class
+把目前整个 Misc 内容表格：
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr class="project-row">
+    <td style="padding:16px;width:20%;vertical-align:middle">
+      <img src='images/baibai.jpg' width=100% style="max-width: 120px;">
+    </td>
+    <td style="padding:8px;width:80%;vertical-align:middle">
+      <strong>Baibai</strong><br>
+      Baibai is my pet bird and an important companion in my daily life.  
+      Outside of research, I enjoy spending time with Baibai — a small reminder to slow down and appreciate simple moments.
+    </td>
+  </tr>
+</tbody></table>
+完整替换成：
+
+<table class="misc-table"
+       style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr class="project-row misc-row">
+
+      <td class="misc-image-cell">
+        <div class="misc-image">
+          <img src="images/baibai.jpg" alt="Baibai">
+        </div>
+      </td>
+
+      <td class="misc-text-cell">
+        <strong>Baibai</strong><br>
+        Baibai is my pet bird and an important companion in my daily life.
+        Outside of research, I enjoy spending time with Baibai — a small
+        reminder to slow down and appreciate simple moments.
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+重点是删除了：
+
+style="max-width: 120px;"
+这就是鸟照片一直很小的直接原因。
+
+3. 给 Misc 添加电脑端样式
+仍然放在你已有的：
+
+@media (min-width: 769px) {
+里面，并放到最后一个 } 之前：
+
+/* ========================================
+   Misc 独立布局
+   ======================================== */
+
+.misc-table {
+  width: 100% !important;
+  table-layout: fixed;
+  border-collapse: separate !important;
+  border-spacing: 0 20px !important;
+}
+
+/* Misc 卡片左右两列 */
+.misc-table .misc-row > td {
+  vertical-align: middle !important;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* 鸟照片区域 */
+.misc-table .misc-image-cell {
+  width: 30% !important;
+
+  padding-top: 34px !important;
+  padding-right: 24px !important;
+  padding-bottom: 34px !important;
+  padding-left: 28px !important;
+
+  border-radius: 16px 0 0 16px;
+}
+
+/* 文字区域 */
+.misc-table .misc-text-cell {
+  width: 70% !important;
+
+  padding-top: 34px !important;
+  padding-right: 40px !important;
+  padding-bottom: 34px !important;
+  padding-left: 18px !important;
+
+  border-radius: 0 16px 16px 0;
+}
+
+/* 图片容器 */
+.misc-table .misc-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Baibai 照片 */
+.misc-table .misc-image img {
+  display: block;
+
+  width: 230px !important;
+  max-width: 90% !important;
+  height: auto !important;
+
+  margin: 0 auto;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px !important;
+
+  box-shadow:
+    0 3px 8px rgba(15, 23, 42, 0.05),
+    0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* 清除全局背景覆盖 */
+.misc-table .misc-text-cell,
+.misc-table .misc-text-cell strong {
+  background: transparent !important;
+}
+
+/* Misc 悬浮效果与 Publications 一致 */
+.misc-table .misc-row {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.misc-table .misc-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
+}
+
+.misc-table .misc-row:hover > td {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+鸟图片现在会从原来的 120px 增加到约 230px，同时整个 Misc 项目条会与 Publications 使用相似的圆角、留白和悬浮质感。
+
+4. 手机端替换旧的鸟图片规则
+你手机端现在有：
+
+.project-row img[style*="max-width: 120px"] {
+  display: block;
+  width: 120px !important;
+  max-width: 42vw !important;
+  height: auto !important;
+  margin: 0 auto 12px;
+}
+由于已经删除了 HTML 中的内联 max-width: 120px，这个选择器不会再匹配。
+
+把它完整替换成：
+
+/* 手机端 Baibai 图片 */
+.misc-table .misc-image img {
+  display: block;
+
+  width: 155px !important;
+  max-width: 52vw !important;
+  height: auto !important;
+
+  margin: 0 auto 12px;
+
+  border-radius: 10px !important;
+}
+这样手机端仍然不会过大。
+
+最终你的电脑端媒体查询末尾大致应当是：
+
+  .publications-table .project-row:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  /* MAPF 单独放大 */
+  .publications-table .one img.mapf-figure {
+    transform: scale(1.14);
+    transform-origin: center;
+    object-fit: contain;
+  }
+
+  .publications-table .one {
+    overflow: visible;
+  }
+
+  /* 下面接完整的 Misc 独立布局 */
+  .misc-table {
+    /* ... */
+  }
+
+}
+这样只会改变两处：
+
+MAPF 正方形图片放大约 14%
+
+Baibai 图片从 120px 提升到 230px，Misc 项目条获得与上面一致的宽版卡片质感
+
+
+
+粘贴的文本 (1)(19).txt
+文档
+
+粘贴的文本 (2)(2).txt
+文档
+你看看现在这样子改还有什么不对的没有，我想所有代码写的很优美就是最好publication一种写法然后misc一种写法这样，我现在的3dvla那两个放大的我觉得可以，你看看怎么改
+
+现在这版能正常显示，但代码还不够干净。主要问题是：
+
+tr:has(.one) 和 .project-row 在做同一套 hover，而且 .project-row 还定义了两遍。
+
+
+Publications 同时依赖 .one、.project-row、compact-figure、mapf-figure，职责比较分散。
+
+MAPF 用 transform: scale(1.14) 放大属于补丁式写法，可能侵入文字列。
+
+手机端的 .project-row 同时控制 Publications 和 Misc，两个组件没有真正分开。
+
+HTML 中仍有大量行内 width、padding，和 CSS 里的规则互相覆盖。
+
+
+Misc 现在已经有独立结构，这个方向是对的。
+
+
+最合适的整理方式是：
+
+Publications 统一使用 publication-*
+
+Misc 统一使用 misc-*
+
+不再使用 .one
+
+不再使用 .project-row
+
+不再使用 transform: scale()
+
+方形图片通过 modifier class 控制实际宽度
+
+一、整理 Publications 的 HTML
+统一结构
+所有 publication 项目都改成这种结构：
+
+<tr class="publication-item">
+  <td class="publication-media">
+    <div class="publication-figure">
+      <img
+        class="publication-image"
+        src="images/r4det.jpg"
+        alt="R4Det framework"
+      >
+    </div>
+  </td>
+
+  <td class="publication-content">
+    <!-- 原来的标题、作者、链接和描述 -->
+  </td>
+</tr>
+也就是说，统一替换：
+
+<tr class="project-row">
+为：
+
+<tr class="publication-item">
+图片单元格从：
+
+<td style="padding:16px;width:25%;vertical-align:middle">
+  <div class="one">
+改成：
+
+<td class="publication-media">
+  <div class="publication-figure">
+文字单元格从：
+
+<td style="padding:8px;width:80%;vertical-align:middle">
+改成：
+
+<td class="publication-content">
+不要再在 HTML 中写 width:20%、width:80%，统一交给 CSS。
+
+四张图片的 class
+R4Det：
+
+<img
+  class="publication-image"
+  src="images/r4det.jpg"
+  alt="R4Det framework"
+>
+3DVLA：
+
+<img
+  class="publication-image"
+  src="images/3dvla.png"
+  alt="3DVLA framework"
+>
+众安 Logo：
+
+<img
+  class="publication-image publication-image--compact"
+  src="images/zhongan.jpg"
+  alt="ZhongAn Information Technology"
+>
+MAPF：
+
+<img
+  class="publication-image publication-image--square"
+  src="images/mapf.gif"
+  alt="MAPF project"
+>
+这样：
+
+R4Det、3DVLA：默认铺满图片列
+
+众安：较小的方形图
+
+MAPF：更大的方形图
+
+不需要 scale()
+
+二、整理 Misc 的 HTML
+你现在的 Misc 结构基本正确，只建议把 class 名统一一下。
+
+替换为：
+
+<table class="misc-table">
+  <tbody>
+    <tr class="misc-item">
+
+      <td class="misc-media">
+        <div class="misc-figure">
+          <img
+            class="misc-image"
+            src="images/baibai.jpg"
+            alt="Baibai"
+          >
+        </div>
+      </td>
+
+      <td class="misc-content">
+        <strong>Baibai</strong><br>
+        Baibai is my pet bird and an important companion in my daily life.
+        Outside of research, I enjoy spending time with Baibai — a small
+        reminder to slow down and appreciate simple moments.
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+这比混用：
+
+project-row misc-row
+misc-image-cell
+misc-text-cell
+更清晰。
+
+三、删除旧的通用项目 CSS
+把下面这些旧规则全部删除：
+
+tr:has(.one) {
+  ...
+}
+
+tr:has(.one):hover {
+  ...
+}
+
+.one {
+  ...
+}
+
+.one img {
+  ...
+}
+
+.project-row {
+  ...
+}
+
+.project-row:hover {
+  ...
+}
+注意你的 .project-row 现在定义了两遍，两组都删除。
+
+
+删除后，桌面和手机都只由新的 publication-* 与 misc-* 控制。
+
+四、添加公共图片基础样式
+放在媒体查询之前，例如 .visitor-map:hover 后面：
+
+/* ========================================
+   Publications / Misc 公共基础
+   ======================================== */
+
+.publication-item,
+.misc-item {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.publication-item > td,
+.misc-item > td {
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.publication-figure,
+.misc-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.publication-image,
+.misc-image {
+  display: block;
+  height: auto !important;
+  object-fit: contain;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px !important;
+
+  box-shadow:
+    0 3px 8px rgba(15, 23, 42, 0.05),
+    0 12px 28px rgba(15, 23, 42, 0.06);
+}
+五、替换手机端项目相关 CSS
+你当前 @media (max-width: 768px) 中，保留顶部个人信息、头像、姓名、标题、News、visitor map 等规则。
+
+删除其中从：
+
+.project-row {
+一直到：
+
+.project-row img[style*="max-width: 120px"] {
+  ...
+}
+这些旧项目规则。
+
+替换为：
+
+/* ========================================
+   手机端 Publications
+   ======================================== */
+
+.publications-table,
+.publications-table > tbody {
+  display: block;
+  width: 100%;
+}
+
+.publication-item {
+  display: block;
+  width: 100%;
+
+  margin-bottom: 18px;
+  padding: 12px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+}
+
+.publication-item > td {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.publication-media {
+  margin-bottom: 12px;
+}
+
+.publication-figure {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.publication-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  max-height: 220px;
+
+  margin: 0 auto;
+}
+
+.publication-image--compact {
+  width: min(210px, 70%) !important;
+}
+
+.publication-image--square {
+  width: min(270px, 86%) !important;
+}
+
+.publication-content,
+.publication-content p,
+.publication-content a,
+.publication-content span,
+.publication-content strong,
+.publication-content em {
+  background: transparent !important;
+}
+
+.publication-content p {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.publication-item:hover {
+  transform: none;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ========================================
+   手机端 Misc
+   ======================================== */
+
+.misc-table,
+.misc-table > tbody {
+  display: block;
+  width: 100%;
+}
+
+.misc-item {
+  display: block;
+  width: 100%;
+
+  margin-bottom: 18px;
+  padding: 12px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+}
+
+.misc-item > td {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.misc-media {
+  margin-bottom: 12px;
+}
+
+.misc-figure {
+  margin: 0 auto;
+}
+
+.misc-image {
+  width: 165px !important;
+  max-width: 52vw !important;
+
+  margin: 0 auto;
+
+  border-radius: 10px !important;
+}
+
+.misc-content,
+.misc-content strong {
+  background: transparent !important;
+}
+
+.misc-item:hover {
+  transform: none;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+}
+MAPF 手机端会比众安大，但不会占满整个屏幕。
+
+六、完整替换电脑端媒体查询
+把当前整个：
+
+@media (min-width: 769px) {
+  ...
+}
+完整替换成下面这一版。
+
+/* ========================================
+   电脑端布局
+   ======================================== */
+
+@media (min-width: 769px) {
+
+  /* 整个网站主体 */
+  body > table {
+    width: calc(100% - 48px) !important;
+    max-width: 1400px !important;
+
+    padding: 28px 24px !important;
+    box-sizing: border-box;
+  }
+
+
+  /* ========================================
+     Publications
+     ======================================== */
+
+  .publications-table {
+    width: 100% !important;
+
+    table-layout: fixed;
+    border-collapse: separate !important;
+    border-spacing: 0 26px !important;
+  }
+
+  .publication-item > td {
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* 图片列 */
+  .publication-media {
+    width: 42% !important;
+
+    padding:
+      38px
+      18px
+      38px
+      22px !important;
+
+    border-radius: 16px 0 0 16px;
+  }
+
+  /* 文字列 */
+  .publication-content {
+    width: 58% !important;
+
+    padding:
+      38px
+      36px
+      38px
+      16px !important;
+
+    border-radius: 0 16px 16px 0;
+  }
+
+  .publication-figure {
+    width: 100%;
+  }
+
+  /* R4Det 和 3DVLA */
+  .publication-image {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  /* 众安：小方图 */
+  .publication-image--compact {
+    width: min(235px, 72%) !important;
+    max-width: 72% !important;
+  }
+
+  /* MAPF：大方图 */
+  .publication-image--square {
+    width: min(340px, 86%) !important;
+    max-width: 86% !important;
+  }
+
+  .publication-content,
+  .publication-content p,
+  .publication-content a,
+  .publication-content span,
+  .publication-content strong,
+  .publication-content em {
+    background: transparent !important;
+  }
+
+  .publication-content .papertitle {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .publication-content p {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .publication-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
+  }
+
+  .publication-item:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+
+  /* ========================================
+     Misc
+     ======================================== */
+
+  .misc-table {
+    width: 100% !important;
+
+    table-layout: fixed;
+    border-collapse: separate !important;
+    border-spacing: 0 20px !important;
+  }
+
+  .misc-item > td {
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  .misc-media {
+    width: 30% !important;
+
+    padding:
+      34px
+      24px
+      34px
+      28px !important;
+
+    border-radius: 16px 0 0 16px;
+  }
+
+  .misc-content {
+    width: 70% !important;
+
+    padding:
+      34px
+      40px
+      34px
+      18px !important;
+
+    background: transparent;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .misc-image {
+    width: min(260px, 88%) !important;
+    max-width: 88% !important;
+
+    margin: 0 auto;
+
+    border-radius: 12px !important;
+  }
+
+  .misc-content,
+  .misc-content strong {
+    background: transparent !important;
+  }
+
+  .misc-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
+  }
+
+  .misc-item:hover > td {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+七、再清理两个 HTML 问题
+你的个人介绍后面多了一个额外的：
+
+</p>
+当前结构中，研究介绍段落关闭后又出现了一次 </p>。
+
+
+改成：
+
+<p>
+  My research aims to advance ...
+</p>
+
+<p>
+  <a href="mailto:...">Email</a>
+  ...
+</p>
+另外众安和 MAPF 中的：
+
+<p></p>
+<p>
+  Description...
+</p>
+把空的：
+
+<p></p>
+删除即可。描述前的间距已经由：
+
+.publication-content p {
+  margin-top: 24px;
+}
+负责。
+
+整理完成以后，代码关系就是：
+
+publications-table
+└── publication-item
+    ├── publication-media
+    │   └── publication-figure
+    │       └── publication-image
+    └── publication-content
+以及：
+
+misc-table
+└── misc-item
+    ├── misc-media
+    │   └── misc-figure
+    │       └── misc-image
+    └── misc-content
+R4Det 和 3DVLA 的当前放大比例保留；众安、MAPF、Baibai 分别通过明确的 modifier 或独立组件控制，不再依赖 scale()、:has()、行内宽度和重复 .project-row。
+
+
+
+粘贴的文本 (1)(20).txt
+文档
+
+粘贴的文本 (2)(3).txt
+文档
+就是你现在完整给我html和css两个文件的所有代码仔细检查后给我，不要注释的
+
+思考了 3m 26s
+已经按你上传的现有内容完整重构好了。原来 Publications 使用 .one、.project-row、:has() 等多套重复规则，Misc 又混用了相同类名；现在已整理为 Publication 一套结构，Misc 一套结构。
+
+ 
+
+
+代码中没有保留任何注释，并且已完成这些检查：
+
+HTML 标签结构完整
+
+4 个 Publication 项目全部保留
+
+R4Det 和 3DVLA 使用统一宽图样式
+
+众安使用紧凑方图样式
+
+MAPF 使用较大方图样式
+
+Baibai 使用独立 Misc 布局
+
+手机端和电脑端分别适配
+
+姓名直接显示，没有打字和光标动画
+
+CSS 解析检查无错误
+
+删除多余的 </p> 和空 <p></p>
+
+文件：
+
+index.html
+
+stylesheet.css
+
+下载两个文件的 ZIP 压缩包
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -252,3 +4810,280 @@
   </script>
 </body>
 </html>
+
+<!DOCTYPE HTML>
+
+<html lang="en"> <head> <title>Tang Yousen - Personal Homepage</title> <meta name="description" content="Tang Yousen is an undergraduate researcher in 3D Vision, Embodied AI and Vision-Language-Action models at Tongji University."> <meta name="robots" content="index, follow"> <meta name="msvalidate.01" content="4B0876AB4E26FC2BF9CA0BDBE9F73D06" /> <link rel="canonical" href="https://tangyousen.github.io/"> <meta name="google-site-verification" content="5zCJWr-kbOzQXHy2I_jB9sPPTru2S6TJDm4tB0npMJU" /> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="author" content="Yousen Tang"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"> <link rel="stylesheet" type="text/css" href="stylesheet.css"> <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script> </head>
+
+<body> <div id="tsparticles"></div> <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> <tr style="padding:0px"> <td style="padding:0px"> <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> <tr style="padding:0px"> <td style="padding:2.5%;width:63%;vertical-align:middle"> <p class="name"> <!-- <span id="typed-name"></span>--> <span id="typed-name">Yousen Tang</span> </p> <p> I am an undergraduate student in Computer Science at <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a> (Class of 2027). I currently work as a Research Assistant at the VDIG Group, Peking University. </p> <p> My research aims to advance <strong>Embodied AI and 3D Perception</strong>, focusing on multimodal fusion and equipping Vision-Language-Action models with physical and geometric reasoning capabilities. </p> </p> <p> <a href="mailto:tangyousen@tongji.edu.cn">Email</a> &nbsp;/&nbsp; <!-- <a href="data/Tang Resume-EN.pdf">CV</a> &nbsp;/&nbsp; --> <a href="https://github.com/TangYousen">Github</a> &nbsp;/&nbsp; <a href="https://scholar.google.com/citations?user=cRdH5LgAAAAJ&hl=zh-CN&oi=ao" target="_blank">Google Scholar</a> </p> </td> <td style="padding:2.5%;width:37%;max-width:37%"> <a href="images/个人照.jpg"><img style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" src="images/个人照.jpg" class="hoverZoomLink"></a> </td> </tr> </tbody></table>
+
+      <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:16px;width:100%;vertical-align:middle">
+            <h2>News</h2>
+            <ul>
+              <li><strong>[May 2026]</strong> <strong style="color: #cc0000;">Actively seeking</strong> research and internship opportunities in 3D Vision, Embodied AI, and Vision-Language-Action (VLA) models.</li>
+              <li><strong>[Feb 2026]</strong> Our paper <em>"R4Det: 4D Radar-Camera Fusion..."</em> was accepted to <strong style="color: #cc0000;">CVPR 2026</strong>!</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody></table>
+      
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:16px;width:100%;vertical-align:middle">
+            <h2>Publications & Research Experience</h2>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class="publications-table" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr class="project-row">
+          <td style="padding:16px;width:25%;vertical-align:middle">
+            <div class="one">
+              <img src="images/r4det.jpg" alt="R4Det framework">
+            </div>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            <span class="papertitle">R4Det: 4D Radar-Camera Fusion for High-Performance 3D Object Detection</span>
+            <br>
+            <strong>Role</strong>: Student Lead Author & Core Contributor
+            <br>
+            Research Assistant, Peking University (VDIG Group)
+            <br>
+            <em>CVPR</em>, 2026
+            <br>
+            <a href="https://arxiv.org/abs/2603.11566" target="_blank">arXiv</a> 
+            /
+            <a href="https://github.com/VDIGPKU/R4Det" target="_blank">Code</a>
+            <p>
+              Contributed to <strong>R4Det</strong>, a radar-camera fusion framework addressing the inherent sparsity of 4D radar and geometric contamination. Designed and implemented core components for depth-aware fusion, temporal alignment, and instance-guided refinement, achieving strong performance on TJ4DRadSet and VoD datasets.
+            </p>
+          </td>
+        </tr>
+        
+        <tr class="project-row">
+          <td style="padding:16px;width:20%;vertical-align:middle">
+            <div class="one">
+              <img src="images/3dvla.png" alt="3DVLA framework">
+            </div>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            
+            <span class="papertitle">3DVLA: Enhancing Vision-Language-Action Models with 3D Understanding</span>
+            
+            <br>
+            <strong>Role</strong>: Student Lead Author & Core Contributor
+            <br>
+            Research Assistant, Peking University (VDIG Group)
+            <br>
+            <em>Feb 2026 - Present</em>
+            <br>
+            <a href="https://arxiv.org/abs/2605.29416" target="_blank">arXiv</a>
+            <p>
+              Contributed to <strong>3DVLA</strong>, a plug-and-play framework that injects robust 3D scene understanding into pre-trained 2D VLA models without disrupting their language priors. Developed core modules for coordinate-driven self-supervision and uncertainty-guided routing to synthesize occluded geometries, improving manipulation performance on LIBERO-Plus and RoboTwin 2.0 benchmarks.
+            </p>
+          </td>
+        </tr>
+
+        <tr class="project-row">
+          <td style="padding:16px;width:20%;vertical-align:middle">
+            <div class="one">
+              <img class="compact-figure" src="images/zhongan.jpg" alt="ZhongAn Information Technology">
+            </div>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            
+            <span class="papertitle">Conversational Data Analysis System (Data Insight Agent)</span>
+            
+            <br>
+            R&D Intern, ZhongAn Information Technology
+            <br>
+            <em>Jul 2025 - Sep 2025</em>
+            <p></p>
+            <p>
+            Engineered an LLM-driven agentic workflow for automated data querying. Optimized model routing, improving intent classification accuracy by 3.8% while reducing inference overhead. Recognized with "Outstanding Individual" award.
+            </p>
+          </td>
+        </tr>
+
+        <tr class="project-row">
+          <td style="padding:16px;width:20%;vertical-align:middle">
+            <div class="one">
+              <img class="mapf-figure" src="images/mapf.gif" alt="MAPF project">
+            </div>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            
+            <span class="papertitle">Multi-Agent Path Planning (MAPF) in Dynamic Environments</span>
+            
+            <br>
+            SITP Project Lead, Tongji University
+            <br>
+            <em>Dec 2023 - Jan 2025</em>
+            <p></p>
+            <p>
+            Implemented A* for single-agent and Conflict-Based Search (CBS) for multi-agent coordination. Applied simulation algorithms based on PIBT for efficient AGV planning.
+            </p>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+        <tr>
+          <td>
+            <h2>Education</h2>
+          </td>
+        </tr>
+      </tbody></table>
+      
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+        <td style="padding:16px;width:100%;vertical-align:middle">
+          <strong>Tongji University</strong>, Shanghai, China<br>
+          B.E. in Computer Science and Technology<br>
+          <em>Sep 2023 - Jun 2027 (Expected)</em><br>
+        </td>
+      </tr>
+      </tbody></table>
+
+      <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+        <tr>
+          <td>
+            <h2>Misc</h2>
+          </td>
+        </tr>
+      </tbody></table>
+      
+      <table class="misc-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+          <tr class="project-row misc-row">
+      
+            <td class="misc-image-cell">
+              <div class="misc-image">
+                <img src="images/baibai.jpg" alt="Baibai">
+              </div>
+            </td>
+      
+            <td class="misc-text-cell">
+              <strong>Baibai</strong><br>
+              Baibai is my pet bird and an important companion in my daily life.
+              Outside of research, I enjoy spending time with Baibai — a small
+              reminder to slow down and appreciate simple moments.
+            </td>
+      
+          </tr>
+        </tbody>
+     </table>
+     <div class="visitor-map">
+        <script
+          type="text/javascript"
+          id="mapmyvisitors"
+          src="https://mapmyvisitors.com/map.js?d=rPHF1Qb_u0FNBolsijceConLUhhe4AqgGIzJV1zHYcQ&cl=ffffff&w=280">
+        </script>
+      </div>
+      <p style="text-align:center; margin-top: 40px; color: #888; font-size: 14px;">
+        © 2026 Yousen Tang
+      </p>
+    </td>
+  </tr>
+</tbody></table>
+<script>
+/*
+const nameText = "Yousen Tang";  
+const typedName = document.getElementById("typed-name");
+const typingSpeed = 190; // 每个字固定间隔 ms
+
+let i = 0;
+
+function typeWriter() {
+  if (i < nameText.length) {
+    typedName.textContent += nameText.charAt(i);
+    i++;
+    setTimeout(typeWriter, typingSpeed); 
+  } else {
+    typedName.classList.add('finished'); // 打完字后移除光标
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  typeWriter();
+});
+*/
+</script>
+<script>
+tsParticles.load("tsparticles", {
+  fullScreen: {
+    enable: false
+  },
+
+  background: {
+    color: {
+      value: "#f8fafc"
+    }
+  },
+
+  fpsLimit: 60,
+
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        area: 800
+      }
+    },
+
+    color: {
+      value: "#9ca3af"
+    },
+
+    links: {
+      enable: true,
+      distance: 140,
+      color: "#d1d5db",
+      opacity: 0.35,
+      width: 1
+    },
+
+    move: {
+      enable: true,
+      speed: 0.6,
+      outModes: {
+        default: "bounce"
+      }
+    },
+
+    opacity: {
+      value: 0.6
+    },
+
+    size: {
+      value: { min: 1, max: 3 }
+    }
+  },
+
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "repulse"
+      },
+      resize: true
+    },
+
+    modes: {
+      repulse: {
+        distance: 90,
+        duration: 0.4
+      }
+    }
+  },
+
+  detectRetina: true
+});
+</script>
+</body> </html>
+
+
+关闭
