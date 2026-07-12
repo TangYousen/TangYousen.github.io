@@ -542,4 +542,14 @@ span.highlight {
   .publications-table .project-row:hover > td {
     background: rgba(255, 255, 255, 0.95) !important;
   }
+  /* MAPF */
+  .publications-table .one img.mapf-figure {
+    transform: scale(1.14);
+    transform-origin: center;
+    object-fit: contain;
+  }
+  
+  .publications-table .one {
+    overflow: visible;
+  }
 }
