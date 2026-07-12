@@ -408,111 +408,78 @@ span.highlight {
     opacity: 0.55;
   }
 }
-/* 电脑端 */
+/*电脑端宽版布局*/
 @media (min-width: 769px) {
 
+  /* 整个网站主体拉宽 */
   body > table {
     width: calc(100% - 48px) !important;
-    max-width: 1400px !important;
-    padding: 28px 24px !important;
+    max-width: 1280px !important;
+    padding: 24px 20px !important;
     box-sizing: border-box;
   }
 
+  /* 项目之间增加纵向空间 */
   .publications-table {
-    width: 100% !important;
-    table-layout: fixed;
-    border-collapse: separate !important;
-    border-spacing: 0 26px !important;
+    border-spacing: 0 22px !important;
   }
 
-  /* 每条项目整体样式 */
-  .publications-table .project-row {
-    border-radius: 16px;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-
+  /* 每条项目做得更高、更舒展 */
   .publications-table .project-row > td {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
     vertical-align: middle !important;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.55) !important;
   }
 
-  /* 图片列：42% */
+  /* 图片列：约占 40% */
   .publications-table .project-row > td:first-child {
-    width: 42% !important;
-
-    padding-top: 38px !important;
-    padding-right: 18px !important;
-    padding-bottom: 38px !important;
-    padding-left: 22px !important;
-
-    border-radius: 16px 0 0 16px;
+    width: 40% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 
-  /* 文字列：58% */
+  /* 文字列：约占 60% */
   .publications-table .project-row > td:nth-child(2) {
-    width: 58% !important;
-
-    padding-top: 38px !important;
-    padding-right: 36px !important;
-    padding-bottom: 38px !important;
-    padding-left: 16px !important;
-
-    border-radius: 0 16px 16px 0;
+    width: 60% !important;
+    padding-left: 10px !important;
+    padding-right: 30px !important;
   }
 
-  /* 图片容器必须真正占满图片列 */
+  /* 图片展示区域 */
   .publications-table .one {
-    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 220px;
 
-    width: 100% !important;
-    max-width: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    height: auto !important;
-    min-height: 0 !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 auto;
   }
 
-  /* 默认项目图片：
-     真正铺满图片列，同时保持原始长宽比 */
+  /* 保持图片原始比例，不裁剪、不拉伸 */
   .publications-table .one img {
     display: block;
 
-    width: 100% !important;
-    max-width: none !important;
-
+    width: auto !important;
     height: auto !important;
-    max-height: none !important;
 
-    margin: 0 auto;
-    padding: 5px;
-    box-sizing: border-box;
+    max-width: 100% !important;
+    max-height: 235px;
 
     object-fit: contain;
 
-    background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 
     box-shadow:
-      0 3px 8px rgba(15, 23, 42, 0.05),
-      0 12px 28px rgba(15, 23, 42, 0.06);
+      0 2px 6px rgba(15, 23, 42, 0.05),
+      0 10px 24px rgba(15, 23, 42, 0.04);
   }
 
-  .publications-table .one img.compact-figure {
-    width: 235px !important;
-    max-width: 72% !important;
-
-    height: auto !important;
-    max-height: none !important;
-
-    margin: 0 auto;
-  }
-
+  /* 卡片内部背景透明，避免全局 td 背景盖住效果 */
+  .publications-table .project-row > td,
   .publications-table .project-row p,
   .publications-table .project-row a,
   .publications-table .project-row span,
@@ -521,25 +488,15 @@ span.highlight {
     background: transparent !important;
   }
 
-  .publications-table .papertitle {
-    display: inline-block;
-    margin-bottom: 5px;
-
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  .publications-table .project-row > td:nth-child(2) p {
-    margin-top: 24px;
-    margin-bottom: 0;
+  /* 每条项目的轻微卡片质感 */
+  .publications-table .project-row {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
   }
 
   .publications-table .project-row:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
     transform: translateY(-3px);
-    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.09);
-  }
-
-  .publications-table .project-row:hover > td {
-    background: rgba(255, 255, 255, 0.95) !important;
   }
 }
